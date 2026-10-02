@@ -1,0 +1,14 @@
+TIẾNG ANH BA LỘ TRÌNH - GÓI CÀI ĐẶT
+
+Cách 1 - Cài như ứng dụng trên điện thoại/máy tính bảng/máy tính (khuyến nghị):
+ 1. Tải cả thư mục này lên một kho GitHub, bật GitHub Pages (Settings > Pages > Deploy from branch).
+ 2. Mở đường link GitHub Pages bằng Chrome (Android/Windows/Mac) hoặc Safari (iPhone/iPad).
+ 3. Chọn "Thêm vào màn hình chính" / "Cài đặt ứng dụng". Sau lần mở đầu tiên, ứng dụng chạy được khi không có mạng.
+
+Cách 2 - Dùng ngay không cần mạng: mở trực tiếp tệp index.html bằng trình duyệt.
+
+Lưu ý:
+ - Bản gói này chạy độc lập, KHÔNG có các phần AI (chấm bài viết chi tiết, trò chuyện, gợi ý thêm từ).
+   Phần Viết được chấm theo số từ mới và độ dài. Muốn dùng AI, mở bản trên Claude.
+ - Tiến độ lưu trong trình duyệt của từng máy. Dùng nút "Xuất tiến độ" / "Nhập tiến độ" để chuyển giữa các máy hoặc với bản trên Claude.
+ - Nhận giọng nói (micro) hoạt động tốt nhất trên Chrome; nếu thiết bị không hỗ trợ, phần Nói chuyển sang tự đánh giá.

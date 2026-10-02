@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tiếng Anh ba lộ trình</title><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#1C6FC4"><link rel="apple-touch-icon" href="icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<style>:root{
+  --bg:#F2F4F7;--surface:#FFFFFF;--sunk:#E8ECF1;--ink:#16202A;--muted:#5A6878;--line:#D3DAE2;
+  --m1:#1C6FC4;--m2:#0B7D55;--m3:#6A44D6;--good:#1C7A47;--mid:#B07800;--bad:#B3392B;--focus:#1C6FC4;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#10161D;--surface:#19222C;--sunk:#141C24;--ink:#E5EBF1;--muted:#94A3B3;--line:#2A3846;
+  --m1:#5AA6F0;--m2:#3DBB8A;--m3:#A18AF5;--good:#4FC184;--mid:#E3B341;--bad:#EC7B6B;--focus:#5AA6F0;}}
+:root[data-theme="dark"]{
+  --bg:#10161D;--surface:#19222C;--sunk:#141C24;--ink:#E5EBF1;--muted:#94A3B3;--line:#2A3846;
+  --m1:#5AA6F0;--m2:#3DBB8A;--m3:#A18AF5;--good:#4FC184;--mid:#E3B341;--bad:#EC7B6B;--focus:#5AA6F0;}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:16px/1.55 "Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+.en{font-family:"Literata",Georgia,"Times New Roman",serif}
+button,input,textarea,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:18px 16px 56px}
+.hidden{display:none!important}
+h1,h2,h3{line-height:1.2;margin:0}
+.muted{color:var(--muted)}
+.small{font-size:.86rem}
+.btn{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:9px 14px;font-weight:600;min-height:42px}
+.btn.primary{background:var(--c,var(--m1));border-color:var(--c,var(--m1));color:#fff}
+.btn:disabled{opacity:.45;cursor:default}
+.btn.sm{padding:5px 10px;min-height:34px;font-size:.88rem}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.icon{background:var(--surface);border:1px solid var(--line);border-radius:50%;width:42px;height:42px;display:inline-grid;place-items:center;flex:none;padding:0}
+.icon svg{width:19px;height:19px}
+.icon.rec{background:var(--bad);border-color:var(--bad);color:#fff}
+.back{background:none;border:none;padding:6px 0;color:var(--muted);font-weight:600}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}
+
+/* Home */
+.hero{padding:10px 0 20px;max-width:62ch}
+.hero h1{font-size:clamp(1.8rem,5.5vw,2.7rem);font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
+.hero p{color:var(--muted);margin:0}
+.totals{display:flex;gap:26px;flex-wrap:wrap;margin:6px 0 22px}
+.totals b{display:block;font-size:1.55rem;font-weight:800}
+.totals span{color:var(--muted);font-size:.85rem}
+.modules{display:grid;gap:14px}
+@media(min-width:760px){.modules{grid-template-columns:repeat(3,1fr)}}
+.mcard{text-align:left;background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--c);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.mcard h2{font-size:1.25rem;font-weight:800}
+.mcard .strip{display:grid;grid-template-columns:repeat(12,1fr);gap:2px;font-size:1.15rem;line-height:1}
+.mcard .strip span{text-align:center;opacity:.28}
+.mcard .strip span.on{opacity:1}
+.mcard .strip span.part{opacity:.62}
+.mfoot{display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
+.lvl{font-weight:800;color:var(--c);font-size:1.05rem}
+.bar{height:6px;background:var(--sunk);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);transition:width .3s}
+.settings{margin-top:26px;display:grid;gap:12px}
+@media(min-width:760px){.settings{grid-template-columns:1fr 1fr}}
+
+/* Module */
+.mhead{display:flex;gap:14px;align-items:center;margin:4px 0 16px}
+.mhead .em{font-size:2.6rem;line-height:1}
+.mhead h1{font-size:clamp(1.5rem,4.5vw,2.1rem);font-weight:800}
+.mgrid{display:grid;gap:16px}
+@media(min-width:1000px){.mgrid{grid-template-columns:1.55fr 1fr;align-items:start}}
+.month{margin-bottom:18px}
+.month-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.month-head h3{font-size:1rem;font-weight:700}
+.month-head .band{font-weight:800;color:var(--c)}
+.weeks{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(min-width:640px){.weeks{grid-template-columns:repeat(4,1fr)}}
+.wtile{position:relative;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:4px;min-height:132px}
+.wtile .em{font-size:2rem;line-height:1.1}
+.wtile .n{font-size:.78rem;color:var(--muted);font-weight:600}
+.wtile .tt{font-weight:600;font-size:.92rem;line-height:1.3}
+.wtile.pass{border-color:var(--c);box-shadow:inset 0 0 0 1px var(--c)}
+.wtile.now::after{content:"Tuần này";position:absolute;top:10px;right:10px;font-size:.7rem;font-weight:700;background:var(--c);color:#fff;border-radius:6px;padding:1px 6px}
+.dots{display:flex;gap:4px;margin-top:auto}
+.dots i{width:100%;height:5px;border-radius:3px;background:var(--sunk)}
+.ck{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;padding:10px 12px;border:1px dashed var(--line);border-radius:12px;flex-wrap:wrap}
+.scale table{width:100%;border-collapse:collapse;font-size:.9rem}
+.scale td,.scale th{padding:7px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.scale th{font-weight:700;color:var(--muted);font-size:.82rem}
+.chip{display:inline-block;font-size:.75rem;font-weight:700;border-radius:6px;padding:1px 7px;color:#fff}
+.radar text{font-size:12px;fill:var(--ink);font-family:inherit}
+.week7{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center;font-size:.78rem}
+.week7 div{background:var(--sunk);border-radius:8px;padding:6px 2px}
+.week7 b{display:block;font-size:1.1rem}
+
+/* Week */
+.whead{display:flex;gap:14px;align-items:center;margin:4px 0 12px}
+.whead .em{font-size:2.6rem;line-height:1}
+.whead h1{font-size:clamp(1.35rem,4vw,1.9rem);font-weight:800}
+.tabs{display:flex;gap:2px;overflow-x:auto;border-bottom:2px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:4;scrollbar-width:none}
+.tab{background:none;border:none;padding:11px 12px;font-weight:600;color:var(--muted);white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-2px;display:flex;gap:6px;align-items:center}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--c)}
+.tab .sc{font-size:.72rem;font-weight:700;border-radius:5px;padding:0 5px;color:#fff}
+.wgrid{display:block}
+.wgrid aside{display:none}
+.wgrid.show-map aside{display:block}
+@media(min-width:1024px){.wgrid{display:grid;grid-template-columns:420px 1fr;gap:22px;align-items:start}.wgrid aside{display:block;position:sticky;top:12px}}
+.panel{padding-top:16px;min-width:0}
+.map svg{width:100%;height:auto;display:block}
+.map .node{cursor:pointer}
+.map text{font-family:inherit;fill:var(--ink)}
+.detail{margin-top:8px;min-height:84px}
+.detail .w{font-size:1.3rem;font-weight:600}
+.cards{display:grid;gap:10px}
+@media(min-width:640px){.cards{grid-template-columns:1fr 1fr}}
+.wc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.wc .top{display:flex;gap:10px;align-items:center}
+.wc .top .e{font-size:1.6rem}
+.wc .top .w{font-weight:600;font-size:1.05rem}
+.wc .vi{color:var(--c);font-weight:700;font-size:.92rem}
+.wc .ex{font-size:.9rem;color:var(--muted)}
+.wc.known{border-color:var(--c)}
+mark{background:color-mix(in srgb,var(--c) 22%,transparent);color:inherit;border-radius:3px;padding:0 2px}
+.passage{font-size:1.08rem;line-height:1.8}
+.passage mark{cursor:pointer}
+.tip{margin-top:10px;padding:10px 12px;border-radius:10px;background:var(--sunk);font-size:.92rem}
+
+/* Runner */
+.prog{height:6px;background:var(--sunk);border-radius:3px;overflow:hidden;margin-bottom:12px}
+.prog i{display:block;height:100%;background:var(--c);transition:width .3s}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.item .ttl{font-size:.82rem;color:var(--muted);font-weight:600;margin-bottom:6px}
+.item .prompt{font-size:1.12rem;margin:4px 0 14px}
+.opts{display:grid;gap:8px}
+@media(min-width:640px){.opts{grid-template-columns:1fr 1fr}}
+.opt{text-align:left;background:var(--bg);border:2px solid var(--line);border-radius:10px;padding:11px 12px;min-height:48px}
+.opt.right{border-color:var(--good);background:color-mix(in srgb,var(--good) 13%,var(--bg))}
+.opt.wrong{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 11%,var(--bg))}
+textarea,.inp{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);font:inherit;color:var(--ink)}
+textarea{min-height:96px;resize:vertical}
+.res{margin-top:12px;font-size:.95rem}
+.res .score{font-weight:800}
+.ok{color:var(--good)} .mid{color:var(--mid)} .no{color:var(--bad)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;min-height:46px;padding:8px;border:1px dashed var(--line);border-radius:10px;margin-bottom:10px}
+.chips button{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+.chips.src button{background:var(--sunk)}
+.done{text-align:center;padding:22px 8px}
+.done .big{font-size:3rem;font-weight:800;color:var(--c)}
+.used mark{font-weight:700}
+.chat{display:flex;flex-direction:column;gap:10px;margin:12px 0}
+.msg{max-width:88%;padding:10px 12px;border-radius:14px;border:1px solid var(--line)}
+.msg.ai{background:var(--surface);align-self:flex-start}
+.msg.me{background:color-mix(in srgb,var(--c) 14%,var(--surface));align-self:flex-end}
+.fb{align-self:flex-end;max-width:88%;font-size:.86rem;border:1px dashed var(--line);border-radius:10px;padding:8px 10px}
+.composer{display:flex;gap:8px;align-items:flex-end}
+.composer textarea{min-height:46px}
+.thinking{color:var(--muted);font-style:italic}
+.toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:.9rem;max-width:92vw;z-index:30}
+.sec{margin-top:22px}
+.sec>h3{font-size:1.02rem;font-weight:700;margin-bottom:8px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media print{.tabs,.back,.icon,.btn{display:none!important}}
+
+/* ===== v2 visual layer ===== */
+.ring{--p:0;width:58px;height:58px;border-radius:50%;background:conic-gradient(var(--c) calc(var(--p)*1%),var(--sunk) 0);display:grid;place-items:center;flex:none}
+.ring>span{width:46px;height:46px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:800;font-size:.85rem}
+.ring.big{width:86px;height:86px}.ring.big>span{width:68px;height:68px;font-size:1.15rem}
+.ladder{display:flex;align-items:flex-end;gap:4px;height:46px}
+.ladder i{flex:1;border-radius:6px 6px 2px 2px;background:var(--sunk);display:flex;align-items:flex-end;justify-content:center;font-style:normal;font-size:.62rem;font-weight:700;color:var(--muted);padding-bottom:2px}
+.ladder i.on{background:var(--c);color:#fff}
+.mcard .band-top{margin:-18px -18px 4px;padding:16px 18px;border-radius:10px 10px 0 0;background:color-mix(in srgb,var(--c) 13%,var(--surface));display:flex;gap:14px;align-items:center}
+.mcard .band-top .big-em{font-size:2.6rem;line-height:1}
+.mcard{border-top-width:0}
+.quick{display:flex;gap:8px;flex-wrap:wrap}
+/* roadmap path */
+.path{position:relative;padding:6px 0 4px}
+.path::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:4px;margin-left:-2px;background:color-mix(in srgb,var(--c) 35%,var(--line));border-radius:2px}
+.mpill{position:relative;margin:18px auto 10px;width:fit-content;max-width:94%;background:var(--c);color:#fff;border-radius:999px;padding:6px 16px;font-weight:700;text-align:center;font-size:.92rem;z-index:1}
+.mpill small{display:block;font-weight:500;opacity:.9;font-size:.75rem}
+.stn{position:relative;display:grid;grid-template-columns:1fr 70px 1fr;align-items:center;gap:8px;margin:8px 0;background:none;border:none;width:100%;padding:0;text-align:left}
+.stn .bub{grid-column:2;grid-row:1;width:70px;height:70px;border-radius:50%;display:grid;place-items:center;z-index:1}
+.stn .bub>span{width:56px;height:56px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-size:1.75rem}
+.stn.pass .bub>span{background:color-mix(in srgb,var(--c) 22%,var(--surface))}
+.stn.now .bub{outline:3px solid var(--c);outline-offset:3px}
+.stn .crd{grid-row:1;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px 10px;min-width:0}
+.stn.L .crd{grid-column:1;text-align:right}.stn.R .crd{grid-column:3}
+.stn .crd .n{font-size:.72rem;font-weight:700;color:var(--c)}
+.stn .crd .tt{font-weight:600;font-size:.88rem;line-height:1.3}
+.stn .crd .ss{font-size:.72rem;color:var(--muted)}
+.flag{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:6px;margin:10px auto 6px;text-align:center}
+.flag .fl{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.6rem;background:var(--surface);border:2px dashed var(--c)}
+.flag.ok .fl{background:var(--c);border-style:solid}
+/* week header */
+.wband{background:color-mix(in srgb,var(--c) 12%,var(--surface));border:1px solid color-mix(in srgb,var(--c) 30%,var(--line));border-radius:18px;padding:16px;margin:4px 0 14px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.wband .em{font-size:3rem;line-height:1}
+.wband .info{flex:1;min-width:200px}
+.wband h1{font-size:clamp(1.3rem,4vw,1.85rem);font-weight:800}
+.skills{display:flex;gap:10px}
+.skl{display:flex;flex-direction:column;align-items:center;gap:3px;background:none;border:none;padding:0;font-size:.72rem;font-weight:600;color:var(--muted)}
+.skl .ring{width:50px;height:50px}.skl .ring>span{width:40px;height:40px;font-size:1.05rem}
+.tab .ti{font-size:1.05rem}
+/* vocab */
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.fchip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px;font-size:.85rem;font-weight:600}
+.fchip[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:#fff}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.vt{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 10px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:2px;min-height:128px}
+.vt .e{font-size:2rem;line-height:1.2}
+.vt .w{font-weight:600;font-size:.95rem;line-height:1.25}
+.vt .v{font-size:.8rem;color:var(--c);font-weight:600}
+.vt.known{border-color:var(--c);background:color-mix(in srgb,var(--c) 8%,var(--surface))}
+.vt .tag{position:absolute;top:6px;left:8px;font-size:.62rem;font-weight:700;color:var(--muted)}
+.vt .ck{position:absolute;top:2px;right:2px;margin:0;padding:4px;border:none;background:none;font-size:1rem;line-height:1;min-width:32px;min-height:32px}
+.fc{perspective:1200px;max-width:520px;margin:0 auto}
+.fc-in{position:relative;height:300px;transition:transform .5s;transform-style:preserve-3d;cursor:pointer}
+.fc.flip .fc-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:20px;border:1px solid var(--line);background:var(--surface);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:20px;text-align:center}
+.face.back{transform:rotateY(180deg);background:color-mix(in srgb,var(--c) 10%,var(--surface))}
+.face .e{font-size:4.2rem;line-height:1}
+.face .w{font-size:clamp(1.4rem,6vw,2rem);font-weight:600}
+.face .v{font-size:1.25rem;font-weight:700;color:var(--c)}
+.face .x{font-size:1rem}
+.fc-nav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:12px;flex-wrap:wrap}
+.vbook .wk{margin-bottom:18px}
+.vbook .wk h3{font-size:.95rem;margin-bottom:8px;display:flex;gap:8px;align-items:center}
+@media (prefers-reduced-motion:reduce){.fc-in{transition:none}}
+
+/* ===== v3: bright, fresh, 3D ===== */
+:root,:root[data-theme="light"]{
+  --bg:#F5F9FF;--surface:#FFFFFF;--sunk:#E9F0F8;--ink:#13213B;--muted:#5A6A82;--line:#E1E8F1;
+  --m1:#2672EC;--m2:#0A8A5F;--m3:#7350F2;--good:#15803D;--mid:#C26A04;--bad:#D92D20;--focus:#2672EC;
+  --shadow:0 1px 2px rgba(19,33,59,.05),0 10px 28px rgba(38,90,180,.09);
+}
+:root[data-theme="dark"]{--shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.25)}
+html{background:var(--bg)}
+body{background:
+  radial-gradient(900px 520px at -8% -12%,#D6ECFF 0%,transparent 62%),
+  radial-gradient(760px 460px at 108% 2%,#D8F7E8 0%,transparent 58%),
+  radial-gradient(900px 640px at 50% 118%,#ECE4FF 0%,transparent 62%),var(--bg);background-attachment:fixed}
+:root[data-theme="dark"] body{background:var(--bg)}
+.e3d{display:inline-block;vertical-align:middle;object-fit:contain;filter:drop-shadow(0 5px 6px rgba(19,33,59,.18));-webkit-user-drag:none;user-select:none}
+.e3d.inl{width:28px;height:28px;filter:none}
+.e3t{display:inline-block;line-height:1}
+.box,.mcard,.item,.wc,.vt,.stn .crd,.face,.week7 div,.opt,.wtile{border-color:var(--line);box-shadow:var(--shadow)}
+.box,.mcard,.item{border-radius:20px}
+.btn{border-radius:12px;box-shadow:0 1px 2px rgba(19,33,59,.06)}
+.btn.primary{background:linear-gradient(135deg,var(--c,var(--m1)),color-mix(in srgb,var(--c,var(--m1)) 78%,#000 0%));box-shadow:0 6px 16px color-mix(in srgb,var(--c,var(--m1)) 35%,transparent)}
+.icon{box-shadow:0 2px 8px rgba(19,33,59,.08);border-color:transparent}
+/* hero */
+.hero2{display:grid;gap:10px;align-items:center;padding:6px 0 18px}
+@media(min-width:760px){.hero2{grid-template-columns:1.4fr 1fr}}
+.hero2 h1{font-size:clamp(2rem,6vw,3rem);font-weight:800;letter-spacing:-.025em;line-height:1.08;margin-bottom:10px}
+.hero2 p{color:var(--muted);margin:0 0 16px;max-width:56ch}
+.hero2 .totals{margin:0;gap:12px}
+.tot{display:flex;gap:10px;align-items:center;background:var(--surface);border-radius:16px;padding:10px 14px;box-shadow:var(--shadow)}
+.tot b{font-size:1.3rem}
+.hero-art{position:relative;height:190px;display:flex;justify-content:center;align-items:center}
+.hero-art span{position:absolute}
+.hero-art .fl0{left:12%;top:22%}.hero-art .fl1{left:40%;top:0}.hero-art .fl2{right:10%;top:32%}
+.hero-art .e3d{width:104px;height:104px;filter:drop-shadow(0 14px 14px rgba(19,33,59,.22))}
+.hero-art::before{content:"";position:absolute;inset:18% 10% 4%;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.95),rgba(255,255,255,0))}
+@media (prefers-reduced-motion:no-preference){
+  .hero-art span{animation:float 6s ease-in-out infinite}
+  .hero-art .fl1{animation-delay:-2s}.hero-art .fl2{animation-delay:-4s}
+  @keyframes float{50%{transform:translateY(-10px)}}
+}
+/* module cards */
+.mcard{border:none;padding:18px;gap:12px}
+.mcard .band-top{background:linear-gradient(135deg,color-mix(in srgb,var(--c) 24%,var(--surface)),color-mix(in srgb,var(--c) 6%,var(--surface)));border-radius:20px 20px 0 0;padding:18px}
+.mcard .band-top .big-em .e3d{width:72px;height:72px}
+.mcard .strip{display:grid;grid-template-columns:repeat(12,1fr);gap:2px}
+.mcard .strip span{display:flex;justify-content:center;opacity:.3;filter:grayscale(.7)}
+.mcard .strip span.on{opacity:1;filter:none}.mcard .strip span.part{opacity:.75;filter:none}
+.mcard .strip .e3d{width:100%;max-width:30px;height:auto;filter:none}
+.ladder i{border-radius:10px 10px 4px 4px}
+.ladder i.on{background:linear-gradient(180deg,color-mix(in srgb,var(--c) 70%,#fff),var(--c))}
+/* bands */
+.wband{border:none;border-radius:24px;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 22%,var(--surface)) 0%,color-mix(in srgb,var(--c) 7%,var(--surface)) 70%);box-shadow:var(--shadow);padding:18px 20px}
+.wband .em .e3d{width:76px;height:76px}
+/* roadmap */
+.path::before{width:6px;margin-left:-3px;background:linear-gradient(180deg,color-mix(in srgb,var(--c) 45%,transparent),color-mix(in srgb,var(--c) 20%,transparent))}
+.mpill{background:linear-gradient(135deg,var(--c),color-mix(in srgb,var(--c) 70%,#fff));box-shadow:0 6px 16px color-mix(in srgb,var(--c) 30%,transparent)}
+.stn .bub{width:78px;height:78px;box-shadow:0 8px 18px rgba(19,33,59,.12)}
+.stn .bub>span{width:64px;height:64px;background:var(--surface)}
+.stn .bub .e3d{width:44px;height:44px}
+.stn.pass .bub>span{background:radial-gradient(circle,color-mix(in srgb,var(--c) 18%,#fff),#fff)}
+.stn{grid-template-columns:1fr 78px 1fr}
+.stn .crd{border:none;border-radius:14px}
+.flag .fl{border-radius:18px;box-shadow:var(--shadow);background:var(--surface)}
+.flag.ok .fl{background:linear-gradient(135deg,var(--c),color-mix(in srgb,var(--c) 65%,#fff))}
+/* tabs as pills */
+.tabs{border-bottom:none;gap:6px;padding:8px 0;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.tab{border:none;border-radius:999px;padding:9px 14px;margin:0;background:var(--surface);box-shadow:0 1px 3px rgba(19,33,59,.08)}
+.tab[aria-selected="true"]{background:var(--c);color:#fff}
+.skl .ring>span{background:var(--surface)}
+/* vocab tiles & flashcards */
+.vt{border:none;border-radius:18px;padding:14px 10px 12px;gap:4px;min-height:150px}
+.vt .e .e3d,.vt .e3d{width:56px;height:56px}
+.vt.known{box-shadow:0 0 0 2px var(--c),var(--shadow)}
+.face{border:none;border-radius:26px;box-shadow:0 18px 40px rgba(38,90,180,.16)}
+.face:not(.back){background:radial-gradient(120% 90% at 50% 0%,color-mix(in srgb,var(--c) 14%,#fff),#fff 70%)}
+:root[data-theme="dark"] .face:not(.back){background:var(--surface)}
+.face .e .e3d{width:128px;height:128px}
+.face.back .e .e3d{width:64px;height:64px}
+.fc-in{height:330px}
+.week7 div{background:var(--surface);border-radius:14px;padding:8px 2px}
+.week7 b{display:flex;justify-content:center;margin:2px 0}
+.week7 .e3d{width:28px;height:28px;filter:none}
+.opt{background:var(--surface);border-color:var(--line)}
+.opt:hover:not(:disabled){border-color:color-mix(in srgb,var(--c) 50%,var(--line))}
+.item .prompt .e3d{width:72px;height:72px}
+.done .big .e3d{width:90px;height:90px}
+.vbook .wk h3 .e3d{width:34px;height:34px}
+.map svg image{filter:drop-shadow(0 3px 3px rgba(19,33,59,.18))}
+.chips button{border-radius:10px;box-shadow:0 1px 3px rgba(19,33,59,.08)}
+.passage mark{background:color-mix(in srgb,var(--c) 18%,transparent);border-bottom:2px solid color-mix(in srgb,var(--c) 60%,transparent)}
+.tab .ti .e3d{width:22px;height:22px}
+.skl .ring .e3d{width:26px;height:26px}
+.mcard .strip span{opacity:.45}
+@media(max-width:759px){
+  .hero2 .hero-art{order:-1;height:130px;margin-bottom:-6px}
+  .hero-art .e3d{width:80px;height:80px}
+  .hero2 .totals{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .tot{flex-direction:column;text-align:center;gap:4px;padding:10px 6px}
+  .tot .e3d{width:32px;height:32px}
+  .tot b{font-size:1.1rem}.tot span{font-size:.72rem}
+}
+@media(max-width:1023px){.wgrid aside .map{max-width:470px;margin-left:auto;margin-right:auto}}
+</style></head>
+<body><div class="wrap" id="app"></div><div class="toast hidden" id="toast" role="status"></div>
+<script>window.E3D={"🏠": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/House/3D/house_3d.png", "👋": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Waving%20hand/Default/3D/waving_hand_3d_default.png", "🤝": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Handshake/3D/handshake_3d.png", "🏘️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Houses/3D/houses_3d.png", "😊": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Smiling%20face%20with%20smiling%20eyes/3D/smiling_face_with_smiling_eyes_3d.png", "🌏": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Globe%20showing%20asia-australia/3D/globe_showing_asia-australia_3d.png", "💼": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Briefcase/3D/briefcase_3d.png", "🔁": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Repeat%20button/3D/repeat_button_3d.png", "🌙": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Crescent%20moon/3D/crescent_moon_3d.png", "🌅": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Sunrise/3D/sunrise_3d.png", "🔤": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Input%20latin%20letters/3D/input_latin_letters_3d.png", "🪪": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Identification%20card/3D/identification_card_3d.png", "📛": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Name%20badge/3D/name_badge_3d.png", "🫱": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Rightwards%20hand/Default/3D/rightwards_hand_3d_default.png", "🎊": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Confetti%20ball/3D/confetti_ball_3d.png", "📍": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Round%20pushpin/3D/round_pushpin_3d.png", "🎂": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Birthday%20cake/3D/birthday_cake_3d.png", "💍": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Ring/3D/ring_3d.png", "🧍": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person%20standing/Default/3D/person_standing_3d_default.png", "🫡": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Saluting%20face/3D/saluting_face_3d.png", "❔": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/White%20question%20mark/3D/white_question_mark_3d.png", "🏡": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/House%20with%20garden/3D/house_with_garden_3d.png", "🫂": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/People%20hugging/3D/people_hugging_3d.png", "👩": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman/Default/3D/woman_3d_default.png", "👦": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Boy/Default/3D/boy_3d_default.png", "🛋️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Couch%20and%20lamp/3D/couch_and_lamp_3d.png", "🍳": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Cooking/3D/cooking_3d.png", "👵": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Old%20woman/Default/3D/old_woman_3d_default.png", "🫶": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Heart%20hands/Default/3D/heart_hands_3d_default.png", "👥": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Busts%20in%20silhouette/3D/busts_in_silhouette_3d.png", "🚸": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Children%20crossing/3D/children_crossing_3d.png", "👴": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Old%20man/Default/3D/old_man_3d_default.png", "🧒": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Child/Default/3D/child_3d_default.png", "👨": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man/Default/3D/man_3d_default.png", "👧": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Girl/Default/3D/girl_3d_default.png", "🛏️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Bed/3D/bed_3d.png", "🛁": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Bathtub/3D/bathtub_3d.png", "🪴": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Potted%20plant/3D/potted_plant_3d.png", "🧹": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Broom/3D/broom_3d.png", "🍼": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Baby%20bottle/3D/baby_bottle_3d.png", "👀": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Eyes/3D/eyes_3d.png", "⏰": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Alarm%20clock/3D/alarm_clock_3d.png", "🥖": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Baguette%20bread/3D/baguette_bread_3d.png", "🛵": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Motor%20scooter/3D/motor_scooter_3d.png", "⌚": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Watch/3D/watch_3d.png", "🍱": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Bento%20box/3D/bento_box_3d.png", "🔔": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Bell/3D/bell_3d.png", "🚿": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Shower/3D/shower_3d.png", "🪥": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Toothbrush/3D/toothbrush_3d.png", "👔": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Necktie/3D/necktie_3d.png", "🚗": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Automobile/3D/automobile_3d.png", "🚧": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Construction/3D/construction_3d.png", "💤": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Zzz/3D/zzz_3d.png", "📚": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Books/3D/books_3d.png", "📆": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Tear-off%20calendar/3D/tear-off_calendar_3d.png", "🐓": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Rooster/3D/rooster_3d.png", "🌃": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Night%20with%20stars/3D/night_with_stars_3d.png", "🍜": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Steaming%20bowl/3D/steaming_bowl_3d.png", "📋": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Clipboard/3D/clipboard_3d.png", "🧾": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Receipt/3D/receipt_3d.png", "👍": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Thumbs%20up/Default/3D/thumbs_up_3d_default.png", "🌶️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Hot%20pepper/3D/hot_pepper_3d.png", "🙋": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person%20raising%20hand/Default/3D/person_raising_hand_3d_default.png", "🍲": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Pot%20of%20food/3D/pot_of_food_3d.png", "💵": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Dollar%20banknote/3D/dollar_banknote_3d.png", "🥡": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Takeout%20box/3D/takeout_box_3d.png", "🤵": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person%20in%20tuxedo/Default/3D/person_in_tuxedo_3d_default.png", "🍽️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Fork%20and%20knife%20with%20plate/3D/fork_and_knife_with_plate_3d.png", "🥗": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Green%20salad/3D/green_salad_3d.png", "🍰": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Shortcake/3D/shortcake_3d.png", "🥦": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Broccoli/3D/broccoli_3d.png", "⚠️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Warning/3D/warning_3d.png", "😋": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Face%20savoring%20food/3D/face_savoring_food_3d.png", "🧂": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Salt/3D/salt_3d.png", "🍬": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Candy/3D/candy_3d.png", "🧊": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Ice/3D/ice_3d.png", "🪙": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Coin/3D/coin_3d.png", "🥢": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Chopsticks/3D/chopsticks_3d.png", "🛒": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Shopping%20cart/3D/shopping_cart_3d.png", "❓": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Red%20question%20mark/3D/red_question_mark_3d.png", "🏷️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Label/3D/label_3d.png", "🔖": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Bookmark/3D/bookmark_3d.png", "📏": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Straight%20ruler/3D/straight_ruler_3d.png", "👕": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/T-shirt/3D/t-shirt_3d.png", "↩️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Right%20arrow%20curving%20left/3D/right_arrow_curving_left_3d.png", "🧑‍💼": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Office%20worker/Default/3D/office_worker_3d_default.png", "🚪": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Door/3D/door_3d.png", "⬇️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Down%20arrow/3D/down_arrow_3d.png", "💎": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Gem%20stone/3D/gem_stone_3d.png", "🔄": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Counterclockwise%20arrows%20button/3D/counterclockwise_arrows_button_3d.png", "💳": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Credit%20card/3D/credit_card_3d.png", "📝": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Memo/3D/memo_3d.png", "📦": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Package/3D/package_3d.png", "🚌": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Bus/3D/bus_3d.png", "⬆️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Up%20arrow/3D/up_arrow_3d.png", "🚦": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Vertical%20traffic%20light/3D/vertical_traffic_light_3d.png", "⬅️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Left%20arrow/3D/left_arrow_3d.png", "↔️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Left-right%20arrow/3D/left-right_arrow_3d.png", "🪞": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Mirror/3D/mirror_3d.png", "🚏": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Bus%20stop/3D/bus_stop_3d.png", "🗺️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/World%20map/3D/world_map_3d.png", "➡️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Right%20arrow/3D/right_arrow_3d.png", "📐": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Triangular%20ruler/3D/triangular_ruler_3d.png", "🚥": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Horizontal%20traffic%20light/3D/horizontal_traffic_light_3d.png", "🌉": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Bridge%20at%20night/3D/bridge_at_night_3d.png", "⭕": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Hollow%20red%20circle/3D/hollow_red_circle_3d.png", "🏢": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Office%20building/3D/office_building_3d.png", "😵‍💫": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Face%20with%20spiral%20eyes/3D/face_with_spiral_eyes_3d.png", "🚕": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Taxi/3D/taxi_3d.png", "🎫": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Ticket/3D/ticket_3d.png", "🚉": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Station/3D/station_3d.png", "🩺": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Stethoscope/3D/stethoscope_3d.png", "🤒": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Face%20with%20thermometer/3D/face_with_thermometer_3d.png", "🤕": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Face%20with%20head-bandage/3D/face_with_head-bandage_3d.png", "📅": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Calendar/3D/calendar_3d.png", "🤧": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Sneezing%20face/3D/sneezing_face_3d.png", "😴": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Sleeping%20face/3D/sleeping_face_3d.png", "💊": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Pill/3D/pill_3d.png", "🙂": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Slightly%20smiling%20face/3D/slightly_smiling_face_3d.png", "😷": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Face%20with%20medical%20mask/3D/face_with_medical_mask_3d.png", "🗣️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Speaking%20head/3D/speaking_head_3d.png", "🤢": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Nauseated%20face/3D/nauseated_face_3d.png", "💫": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Dizzy/3D/dizzy_3d.png", "🩸": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Drop%20of%20blood/3D/drop_of_blood_3d.png", "🩹": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Adhesive%20bandage/3D/adhesive_bandage_3d.png", "🏥": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Hospital/3D/hospital_3d.png", "💐": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Bouquet/3D/bouquet_3d.png", "🛡️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Shield/3D/shield_3d.png", "🌦️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Sun%20behind%20rain%20cloud/3D/sun_behind_rain_cloud_3d.png", "🌧️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Cloud%20with%20rain/3D/cloud_with_rain_3d.png", "☀️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Sun/3D/sun_3d.png", "💦": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Sweat%20droplets/3D/sweat_droplets_3d.png", "🌊": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Water%20wave/3D/water_wave_3d.png", "🌡️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Thermometer/3D/thermometer_3d.png", "📡": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Satellite%20antenna/3D/satellite_antenna_3d.png", "☂️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Umbrella/3D/umbrella_3d.png", "🍃": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Leaf%20fluttering%20in%20wind/3D/leaf_fluttering_in_wind_3d.png", "☁️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Cloud/3D/cloud_3d.png", "💨": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Dashing%20away/3D/dashing_away_3d.png", "⛈️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Cloud%20with%20lightning%20and%20rain/3D/cloud_with_lightning_and_rain_3d.png", "🌩️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Cloud%20with%20lightning/3D/cloud_with_lightning_3d.png", "🏜️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Desert/3D/desert_3d.png", "🥵": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Hot%20face/3D/hot_face_3d.png", "🧥": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Coat/3D/coat_3d.png", "🌍": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Globe%20showing%20europe-africa/3D/globe_showing_europe-africa_3d.png", "💧": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Droplet/3D/droplet_3d.png", "📱": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Mobile%20phone/3D/mobile_phone_3d.png", "📵": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/No%20mobile%20phones/3D/no_mobile_phones_3d.png", "📞": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Telephone%20receiver/3D/telephone_receiver_3d.png", "🟢": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Green%20circle/3D/green_circle_3d.png", "📶": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Antenna%20bars/3D/antenna_bars_3d.png", "⏸️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Pause%20button/3D/pause_button_3d.png", "💬": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Speech%20balloon/3D/speech_balloon_3d.png", "📨": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Incoming%20envelope/3D/incoming_envelope_3d.png", "🔢": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Input%20numbers/3D/input_numbers_3d.png", "📼": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Videocassette/3D/videocassette_3d.png", "📴": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Mobile%20phone%20off/3D/mobile_phone_off_3d.png", "🔌": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Electric%20plug/3D/electric_plug_3d.png", "🔋": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Battery/3D/battery_3d.png", "🪫": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Low%20battery/3D/low_battery_3d.png", "📹": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Video%20camera/3D/video_camera_3d.png", "🔙": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Back%20arrow/3D/back_arrow_3d.png", "🔊": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Speaker%20high%20volume/3D/speaker_high_volume_3d.png", "✈️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Airplane/3D/airplane_3d.png", "⏳": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Hourglass%20not%20done/3D/hourglass_not_done_3d.png", "🛎️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Bellhop%20bell/3D/bellhop_bell_3d.png", "🛂": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Passport%20control/3D/passport_control_3d.png", "🥐": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Croissant/3D/croissant_3d.png", "🔑": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Key/3D/key_3d.png", "🧳": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Luggage/3D/luggage_3d.png", "🎟️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Admission%20tickets/3D/admission_tickets_3d.png", "💺": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Seat/3D/seat_3d.png", "🛌": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person%20in%20bed/Default/3D/person_in_bed_3d_default.png", "🌄": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Sunrise%20over%20mountains/3D/sunrise_over_mountains_3d.png", "🎁": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Wrapped%20gift/3D/wrapped_gift_3d.png", "🚩": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Triangular%20flag/3D/triangular_flag_3d.png", "🗒️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Spiral%20notepad/3D/spiral_notepad_3d.png", "😪": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Sleepy%20face/3D/sleepy_face_3d.png", "🎣": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Fishing%20pole/3D/fishing_pole_3d.png", "🕰️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Mantelpiece%20clock/3D/mantelpiece_clock_3d.png", "💛": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Yellow%20heart/3D/yellow_heart_3d.png", "🎨": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Artist%20palette/3D/artist_palette_3d.png", "🏋️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person%20lifting%20weights/Default/3D/person_lifting_weights_3d_default.png", "🧋": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Bubble%20tea/3D/bubble_tea_3d.png", "🤩": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Star-struck/3D/star-struck_3d.png", "🏸": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Badminton/3D/badminton_3d.png", "🏃": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person%20running/Default/3D/person_running_3d_default.png", "🌱": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Seedling/3D/seedling_3d.png", "📷": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Camera/3D/camera_3d.png", "🎸": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Guitar/3D/guitar_3d.png", "🎲": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Game%20die/3D/game_die_3d.png", "🏕️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Camping/3D/camping_3d.png", "🙌": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Raising%20hands/Default/3D/raising_hands_3d_default.png", "🧘": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person%20in%20lotus%20position/Default/3D/person_in_lotus_position_3d_default.png", "1️⃣": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Keycap%201/3D/keycap_1_3d.png", "🥳": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Partying%20face/3D/partying_face_3d.png", "🔀": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Shuffle%20tracks%20button/3D/shuffle_tracks_button_3d.png", "🗳️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Ballot%20box%20with%20ballot/3D/ballot_box_with_ballot_3d.png", "💭": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Thought%20balloon/3D/thought_balloon_3d.png", "⚖️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Balance%20scale/3D/balance_scale_3d.png", "💡": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Light%20bulb/3D/light_bulb_3d.png", "😅": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Grinning%20face%20with%20sweat/3D/grinning_face_with_sweat_3d.png", "🤔": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Thinking%20face/3D/thinking_face_3d.png", "🙃": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Upside-down%20face/3D/upside-down_face_3d.png", "✅": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Check%20mark%20button/3D/check_mark_button_3d.png", "👁️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Eye/3D/eye_3d.png", "👎": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Thumbs%20down/Default/3D/thumbs_down_3d_default.png", "💯": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Hundred%20points/3D/hundred_points_3d.png", "🎯": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Bullseye/3D/bullseye_3d.png", "📌": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Pushpin/3D/pushpin_3d.png", "↪️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Left%20arrow%20curving%20right/3D/left_arrow_curving_right_3d.png", "🤙": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Call%20me%20hand/Default/3D/call_me_hand_3d_default.png", "💰": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Money%20bag/3D/money_bag_3d.png", "📒": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Ledger/3D/ledger_3d.png", "🛍️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Shopping%20bags/3D/shopping_bags_3d.png", "📊": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Bar%20chart/3D/bar_chart_3d.png", "🐷": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Pig%20face/3D/pig_face_3d.png", "🆘": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Sos%20button/3D/sos_button_3d.png", "⛓️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Chains/3D/chains_3d.png", "👛": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Purse/3D/purse_3d.png", "✂️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Scissors/3D/scissors_3d.png", "💶": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Euro%20banknote/3D/euro_banknote_3d.png", "🏛️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Classical%20building/3D/classical_building_3d.png", "🏦": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Bank/3D/bank_3d.png", "📃": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Page%20with%20curl/3D/page_with_curl_3d.png", "🔐": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Locked%20with%20key/3D/locked_with_key_3d.png", "🆕": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/New%20button/3D/new_button_3d.png", "🏧": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Atm%20sign/3D/atm_sign_3d.png", "🔳": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/White%20square%20button/3D/white_square_button_3d.png", "💲": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Heavy%20dollar%20sign/3D/heavy_dollar_sign_3d.png", "🤳": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Selfie/Default/3D/selfie_3d_default.png", "👆": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Backhand%20index%20pointing%20up/Default/3D/backhand_index_pointing_up_3d_default.png", "📈": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Chart%20increasing/3D/chart_increasing_3d.png", "📤": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Outbox%20tray/3D/outbox_tray_3d.png", "❄️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Snowflake/3D/snowflake_3d.png", "📥": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Inbox%20tray/3D/inbox_tray_3d.png", "🎈": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Balloon/3D/balloon_3d.png", "🔍": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Magnifying%20glass%20tilted%20left/3D/magnifying_glass_tilted_left_3d.png", "🗓️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Spiral%20calendar/3D/spiral_calendar_3d.png", "🧱": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Brick/3D/brick_3d.png", "⏪": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Fast%20reverse%20button/3D/fast_reverse_button_3d.png", "📜": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Scroll/3D/scroll_3d.png", "🛤️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Railway%20track/3D/railway_track_3d.png", "⭐": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Star/3D/star_3d.png", "💸": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Money%20with%20wings/3D/money_with_wings_3d.png", "🚨": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Police%20car%20light/3D/police_car_light_3d.png", "⏱️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Stopwatch/3D/stopwatch_3d.png", "💥": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Collision/3D/collision_3d.png", "📉": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Chart%20decreasing/3D/chart_decreasing_3d.png", "➗": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Divide/3D/divide_3d.png", "📄": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Page%20facing%20up/3D/page_facing_up_3d.png", "🖊️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Pen/3D/pen_3d.png", "➕": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Plus/3D/plus_3d.png", "⏲️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Timer%20clock/3D/timer_clock_3d.png", "🏺": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Amphora/3D/amphora_3d.png", "🔗": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Link/3D/link_3d.png", "🎗️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Reminder%20ribbon/3D/reminder_ribbon_3d.png", "🚑": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Ambulance/3D/ambulance_3d.png", "🕊️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Dove/3D/dove_3d.png", "🎓": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Graduation%20cap/3D/graduation_cap_3d.png", "⛔": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/No%20entry/3D/no_entry_3d.png", "🧭": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Compass/3D/compass_3d.png", "🔎": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Magnifying%20glass%20tilted%20right/3D/magnifying_glass_tilted_right_3d.png", "🏖️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Beach%20with%20umbrella/3D/beach_with_umbrella_3d.png", "🧯": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Fire%20extinguisher/3D/fire_extinguisher_3d.png", "🕳️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Hole/3D/hole_3d.png", "🔒": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Locked/3D/locked_3d.png", "💪": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Flexed%20biceps/Default/3D/flexed_biceps_3d_default.png", "🪜": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Ladder/3D/ladder_3d.png", "🥇": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/1st%20place%20medal/3D/1st_place_medal_3d.png", "🚴": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person%20biking/Default/3D/person_biking_3d_default.png", "🙅": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person%20gesturing%20no/Default/3D/person_gesturing_no_3d_default.png", "👂": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Ear/Default/3D/ear_3d_default.png", "😟": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Worried%20face/3D/worried_face_3d.png", "📑": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Bookmark%20tabs/3D/bookmark_tabs_3d.png", "🤲": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Palms%20up%20together/Default/3D/palms_up_together_3d_default.png", "🤸": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person%20cartwheeling/Default/3D/person_cartwheeling_3d_default.png", "😌": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Relieved%20face/3D/relieved_face_3d.png", "🧰": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Toolbox/3D/toolbox_3d.png", "📎": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Paperclip/3D/paperclip_3d.png", "🥀": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Wilted%20flower/3D/wilted_flower_3d.png", "💱": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Currency%20exchange/3D/currency_exchange_3d.png", "❌": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Cross%20mark/3D/cross_mark_3d.png", "📣": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Megaphone/3D/megaphone_3d.png", "☎️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Telephone/3D/telephone_3d.png", "🧺": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Basket/3D/basket_3d.png", "🎢": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Roller%20coaster/3D/roller_coaster_3d.png", "🧩": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Puzzle%20piece/3D/puzzle_piece_3d.png", "🎚️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Level%20slider/3D/level_slider_3d.png", "🏗️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Building%20construction/3D/building_construction_3d.png", "🫙": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Jar/3D/jar_3d.png", "🌾": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Sheaf%20of%20rice/3D/sheaf_of_rice_3d.png", "💹": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Chart%20increasing%20with%20yen/3D/chart_increasing_with_yen_3d.png", "🏁": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Chequered%20flag/3D/chequered_flag_3d.png", "🏭": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Factory/3D/factory_3d.png", "📕": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Closed%20book/3D/closed_book_3d.png", "↕️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Up-down%20arrow/3D/up-down_arrow_3d.png", "⚙️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Gear/3D/gear_3d.png", "🥧": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Pie/3D/pie_3d.png", "📢": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Loudspeaker/3D/loudspeaker_3d.png", "🚫": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Prohibited/3D/prohibited_3d.png", "🧷": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Safety%20pin/3D/safety_pin_3d.png", "⚔️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Crossed%20swords/3D/crossed_swords_3d.png", "🤐": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Zipper-mouth%20face/3D/zipper-mouth_face_3d.png", "🧼": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Soap/3D/soap_3d.png", "📘": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Blue%20book/3D/blue_book_3d.png", "✍️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Writing%20hand/Default/3D/writing_hand_3d_default.png", "🗂️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Card%20index%20dividers/3D/card_index_dividers_3d.png", "🕵️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Detective/Default/3D/detective_3d_default.png", "🌀": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Cyclone/3D/cyclone_3d.png", "👣": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Footprints/3D/footprints_3d.png", "🔬": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Microscope/3D/microscope_3d.png", "❗": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Red%20exclamation%20mark/3D/red_exclamation_mark_3d.png", "🛠️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Hammer%20and%20wrench/3D/hammer_and_wrench_3d.png", "🧮": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Abacus/3D/abacus_3d.png", "🏅": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Sports%20medal/3D/sports_medal_3d.png", "🧪": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Test%20tube/3D/test_tube_3d.png", "📖": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Open%20book/3D/open_book_3d.png", "🔭": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Telescope/3D/telescope_3d.png", "🧵": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Thread/3D/thread_3d.png", "🧐": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Face%20with%20monocle/3D/face_with_monocle_3d.png", "📰": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Newspaper/3D/newspaper_3d.png", "📇": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Card%20index/3D/card_index_3d.png", "✒️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Black%20nib/3D/black_nib_3d.png", "🗄️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/File%20cabinet/3D/file_cabinet_3d.png", "🔓": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Unlocked/3D/unlocked_3d.png", "🔮": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Crystal%20ball/3D/crystal_ball_3d.png", "➖": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Minus/3D/minus_3d.png", "0️⃣": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Keycap%200/3D/keycap_0_3d.png", "✔️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Check%20mark/3D/check_mark_3d.png", "🤷": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person%20shrugging/Default/3D/person_shrugging_3d_default.png", "🎛️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Control%20knobs/3D/control_knobs_3d.png", "🔧": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Wrench/3D/wrench_3d.png", "👻": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Ghost/3D/ghost_3d.png", "🔘": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Radio%20button/3D/radio_button_3d.png", "〰️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Wavy%20dash/3D/wavy_dash_3d.png", "🗃️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Card%20file%20box/3D/card_file_box_3d.png", "➰": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Curly%20loop/3D/curly_loop_3d.png", "✖️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Multiply/3D/multiply_3d.png", "⏮️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Last%20track%20button/3D/last_track_button_3d.png", "↘️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Down-right%20arrow/3D/down-right_arrow_3d.png", "📬": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Open%20mailbox%20with%20raised%20flag/3D/open_mailbox_with_raised_flag_3d.png", "🖼️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Framed%20picture/3D/framed_picture_3d.png", "🔇": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Muted%20speaker/3D/muted_speaker_3d.png", "💻": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Laptop/3D/laptop_3d.png", "🎙️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Studio%20microphone/3D/studio_microphone_3d.png", "🔽": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Downwards%20button/3D/downwards_button_3d.png", "🧑‍🏫": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Teacher/Default/3D/teacher_3d_default.png", "🦄": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Unicorn/3D/unicorn_3d.png", "↗️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Up-right%20arrow/3D/up-right_arrow_3d.png", "⛰️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Mountain/3D/mountain_3d.png", "🅿️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/P%20button/3D/p_button_3d.png", "🟦": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Blue%20square/3D/blue_square_3d.png", "🪢": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Knot/3D/knot_3d.png", "🔠": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Input%20latin%20uppercase/3D/input_latin_uppercase_3d.png", "🕸️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Spider%20web/3D/spider_web_3d.png", "🟪": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Purple%20square/3D/purple_square_3d.png", "🧬": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Dna/3D/dna_3d.png", "⚗️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Alembic/3D/alembic_3d.png", "🎻": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Violin/3D/violin_3d.png", "🔃": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Clockwise%20vertical%20arrows/3D/clockwise_vertical_arrows_3d.png", "✉️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Envelope/3D/envelope_3d.png", "🙏": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Folded%20hands/Default/3D/folded_hands_3d_default.png", "🎤": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Microphone/3D/microphone_3d.png", "🎉": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Party%20popper/3D/party_popper_3d.png", "📭": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Open%20mailbox%20with%20lowered%20flag/3D/open_mailbox_with_lowered_flag_3d.png", "🪛": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Screwdriver/3D/screwdriver_3d.png", "🖥️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Desktop%20computer/3D/desktop_computer_3d.png", "🎧": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Headphone/3D/headphone_3d.png", "☕": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Hot%20beverage/3D/hot_beverage_3d.png", "🃏": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Joker/3D/joker_3d.png", "🔲": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Black%20square%20button/3D/black_square_button_3d.png", "🅰️": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/A%20button%20blood%20type/3D/a_button_blood_type_3d.png", "🤗": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Hugging%20face/3D/hugging_face_3d.png", "🏆": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Trophy/3D/trophy_3d.png", "🔥": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Fire/3D/fire_3d.png"};window.__PWA=true;
+const M1={id:"m1",name:"Giao tiếp thường nhật",en:"Everyday English",color:"--m1",icon:"🏠",
+persona:"a friendly English-speaking neighbor or local person in everyday situations",
+months:[
+ {lv:"A1 → A2",name:"Giao tiếp sinh tồn",can:"Tự giới thiệu, nói về gia đình, sinh hoạt, gọi món."},
+ {lv:"A2",name:"Xử lý tình huống hằng ngày",can:"Mua sắm, hỏi đường, đi khám bệnh, nói về thời tiết."},
+ {lv:"A2+ → B1",name:"Trò chuyện và nêu ý kiến",can:"Gọi điện, du lịch, kể kế hoạch, nêu và phản hồi quan điểm."}
+],
+weeks:[
+{t:"Chào hỏi và giới thiệu",e:"Greetings and introductions",i:"👋",
+ w:[["greet","chào hỏi","👋"],["introduce","giới thiệu","🤝"],["neighbor","hàng xóm","🏘️"],["nice to meet you","rất vui được gặp","😊"],["originally from","quê gốc ở","🌏"],["job","công việc","💼"],["how about you","còn bạn thì sao","🔁"],["see you later","hẹn gặp lại","🌙"]],
+ p:"Tom has a new neighbor. In the morning, he goes out to greet her. “Hi, I'm Tom. Nice to meet you,” he says. “Nice to meet you too. My name is Mai. I'm originally from Can Tho.” Tom asks about her job. “I work at a bank. How about you?” “I'm a teacher.” Before he leaves, Tom says he wants to introduce her to his wife next weekend. “See you later, Mai!”",
+ q:[["Mai is originally from Can Tho.",true],["Tom works at a bank.",false]],
+ x:"Viết 4–5 câu tự giới thiệu với một người hàng xóm mới: tên, quê, công việc, và hỏi lại họ."},
+{t:"Gia đình và nhà ở",e:"Family and home",i:"🏡",
+ w:[["family","gia đình","🫂"],["wife","vợ","👩"],["son","con trai","👦"],["living room","phòng khách","🛋️"],["kitchen","nhà bếp","🍳"],["relatives","họ hàng","👵"],["get along","hòa thuận, hợp nhau","🤗"],["take care of","chăm sóc","🫶"]],
+ p:"Minh lives with his family in a small house near the river. He has a wife and three boys. His oldest son is ten, and the youngest is four. In the evening, everyone sits in the living room and talks about their day. Minh's wife cooks dinner in the kitchen, and the boys help to set the table. On weekends, they visit relatives in the countryside. The children get along well with their cousins. Minh's mother often says, “It is important to take care of each other.”",
+ q:[["Minh has three daughters.",false],["The family visits relatives on weekends.",true]],
+ x:"Viết 4–5 câu mô tả gia đình và ngôi nhà của anh."},
+{t:"Sinh hoạt hằng ngày",e:"Daily routine",i:"⏰",
+ w:[["wake up","thức dậy","⏰"],["usually","thường thường","🔁"],["have breakfast","ăn sáng","🥖"],["commute","quãng đường đi làm","🛵"],["on time","đúng giờ","⌚"],["lunch break","giờ nghỉ trưa","🍱"],["get home","về đến nhà","🏡"],["go to bed","đi ngủ","🛏️"]],
+ p:"I usually wake up at half past five. I have breakfast with my children, and then I take them to school. My commute to the office takes about twenty minutes by motorbike. I try to arrive on time, because our meeting starts at seven thirty. At noon, I have a one-hour lunch break, so I sometimes take a short nap. I get home at around six. After dinner, I help my sons with their homework. I usually go to bed at ten thirty.",
+ q:[["The speaker drives a car to work.",false],["The lunch break is one hour long.",true]],
+ x:"Viết 5 câu mô tả một ngày bình thường của anh, có mốc giờ cụ thể."},
+{t:"Ăn uống và gọi món",e:"Food and ordering",i:"🍜",
+ w:[["menu","thực đơn","📋"],["order","gọi món","🧾"],["recommend","gợi ý, giới thiệu","👍"],["spicy","cay","🌶️"],["I'd like","tôi muốn (lịch sự)","🙋"],["main course","món chính","🍲"],["the bill","hóa đơn tính tiền","💵"],["takeaway","đồ mang đi","🥡"]],
+ p:"Waiter: “Good evening. Here is the menu. Are you ready to order?” Customer: “Not yet. What do you recommend?” Waiter: “Our grilled fish is very popular, but it is a little spicy.” Customer: “That's fine. I'd like the grilled fish as a main course, and a glass of orange juice, please.” Later, the customer asks, “Could I have the bill, please? And can I get this soup as a takeaway?” Waiter: “Of course. I'll bring it right away.”",
+ q:[["The grilled fish is not spicy at all.",false],["The customer wants to take the soup home.",true]],
+ x:"Viết một đoạn hội thoại 5–6 lượt gọi món ở nhà hàng."},
+{t:"Mua sắm và giá cả",e:"Shopping and prices",i:"🛒",
+ w:[["how much","bao nhiêu tiền","❓"],["price","giá","🏷️"],["discount","giảm giá","🔖"],["size","kích cỡ","📏"],["try on","mặc thử","👕"],["refund","hoàn tiền","↩️"],["receipt","hóa đơn, biên lai","🧾"],["cash","tiền mặt","💵"]],
+ p:"Ha wants to buy a shirt for her husband's birthday. She finds a blue one and asks the shop assistant, “How much is this shirt?” “The price is three hundred thousand dong, but there is a twenty percent discount this week.” Ha is not sure about the size, so her husband will try on the shirt later. “If it doesn't fit, can I get a refund?” she asks. “You can exchange it within seven days, but please keep the receipt.” Ha pays in cash and leaves happily.",
+ q:[["There is a discount this week.",true],["Ha pays by card.",false]],
+ x:"Viết 4–5 câu kể lần đi mua sắm gần đây: mua gì, giá bao nhiêu, có giảm giá không."},
+{t:"Hỏi đường và đi lại",e:"Directions and transport",i:"🚌",
+ w:[["far from","xa (nơi nào)","📍"],["go straight","đi thẳng","⬆️"],["crossroads","ngã tư","🚦"],["turn left","rẽ trái","⬅️"],["next to","bên cạnh","↔️"],["opposite","đối diện","🪞"],["bus stop","trạm xe buýt","🚏"],["get off","xuống xe","🚪"]],
+ p:"A tourist stops Nam on the street. “Excuse me, how can I get to the post office?” Nam smiles and says, “It isn't far from here. Go straight for about two hundred meters until you reach the crossroads. Then turn left. The post office is next to a big pharmacy, opposite the park.” “Can I take a bus?” “Yes, you can. The bus stop is over there. Take bus number five and get off at the second stop.” “Thank you so much!”",
+ q:[["The post office is next to a pharmacy.",true],["The tourist should turn right at the crossroads.",false]],
+ x:"Viết 4–5 câu chỉ đường từ nhà anh đến quán cà phê gần nhất."},
+{t:"Sức khỏe và khám bệnh",e:"Health and the doctor",i:"🩺",
+ w:[["fever","sốt","🤒"],["headache","đau đầu","🤕"],["appointment","lịch hẹn","📅"],["symptoms","triệu chứng","🤧"],["prescription","đơn thuốc","📝"],["rest","nghỉ ngơi","😴"],["pharmacy","nhà thuốc","💊"],["feel better","thấy khỏe hơn","🙂"]],
+ p:"Last Monday, Binh woke up with a fever and a bad headache. He called the clinic and made an appointment for nine o'clock. The doctor asked about his symptoms. “I feel tired, and my throat hurts,” he said. The doctor checked his temperature and wrote a prescription. “Take this medicine three times a day after meals, drink plenty of water and get some rest,” she said. Binh bought the medicine at a pharmacy near the clinic. Two days later, he started to feel better.",
+ q:[["Binh's appointment was in the afternoon.",false],["The doctor told Binh to drink plenty of water.",true]],
+ x:"Viết 4–5 câu mô tả triệu chứng khi bị cảm và điều anh sẽ nói với bác sĩ."},
+{t:"Thời tiết và mùa",e:"Weather and seasons",i:"🌦️",
+ w:[["rainy season","mùa mưa","🌧️"],["dry season","mùa khô","☀️"],["humid","ẩm ướt","💦"],["flood","lũ, ngập","🌊"],["temperature","nhiệt độ","🌡️"],["forecast","dự báo","📡"],["umbrella","cái ô","☂️"],["cool down","dịu mát lại","🍃"]],
+ p:"In the Mekong Delta, there are two main seasons: the rainy season and the dry season. The rainy season usually lasts from May to November. During this time, the air is very humid, and it often rains heavily in the afternoon. In some years, the water rises and causes a flood in low areas. The dry season is sunny, and the temperature can be very high. People check the weather forecast before they travel. In the rainy season, most people carry an umbrella or a raincoat. In the evening, the weather usually starts to cool down.",
+ q:[["The rainy season usually lasts from May to November.",true],["People rarely carry umbrellas in the rainy season.",false]],
+ x:"Viết 4–5 câu mô tả thời tiết hôm nay và mùa anh thích nhất."},
+{t:"Gọi điện và nhắn tin",e:"Phone calls and messages",i:"📱",
+ w:[["speaking","đang nghe máy (giới thiệu)","🗣️"],["missed call","cuộc gọi nhỡ","📵"],["call back","gọi lại","📞"],["available","rảnh, có thể","🟢"],["bad connection","sóng yếu","📶"],["hold on","chờ máy một chút","⏸️"],["text","nhắn tin","💬"],["leave a message","để lại lời nhắn","📨"]],
+ p:"“Hello, this is Hung speaking.” “Hi Hung, it's Linh. I saw a missed call from you this morning.” “Oh yes, thanks. I hoped you would call back. Are you available tomorrow afternoon?” “Sorry, I can't hear you clearly. It's a bad connection.” “I said, are you free tomorrow afternoon?” “Hold on, let me check my calendar. Yes, I'm free after three.” “Great. I'll text you the address. If I don't answer later, please leave a message.”",
+ q:[["Linh is free after three tomorrow.",true],["Linh will text the address.",false]],
+ x:"Viết một tin nhắn 3–4 câu dời lịch hẹn với bạn và đề xuất thời gian mới."},
+{t:"Du lịch và khách sạn",e:"Travel and hotels",i:"✈️",
+ w:[["delayed","bị trễ","⏳"],["reservation","đặt chỗ trước","🛎️"],["passport","hộ chiếu","🛂"],["double room","phòng đôi","🛏️"],["included","đã bao gồm","🥐"],["check in","nhận phòng","🔑"],["luggage","hành lý","🧳"],["sightseeing","tham quan","🗺️"]],
+ p:"Our flight to Da Nang was delayed for two hours, so we arrived at the hotel late. At the front desk, I said, “Good evening. I have a reservation under the name Pham.” The receptionist asked for my passport and said, “You have a double room for three nights, and breakfast is included.” It took only five minutes to check in. A porter helped us carry our luggage. The next day, we went sightseeing in Hoi An. On the last morning, we had to leave the room before twelve o'clock.",
+ q:[["The flight was on time.",false],["Breakfast is included in the room price.",true]],
+ x:"Viết 4–5 câu kể một chuyến đi gần đây: đi đâu, ở đâu, làm gì."},
+{t:"Sở thích và cuối tuần",e:"Hobbies and weekend plans",i:"🎣",
+ w:[["free time","thời gian rảnh","🕰️"],["keen on","rất thích","💛"],["fishing","câu cá","🎣"],["hobby","sở thích","🎨"],["plan to","dự định","📅"],["work out","tập thể dục","🏋️"],["hang out","đi chơi cùng","🧋"],["look forward to","mong chờ","🤩"]],
+ p:"In my free time, I like reading and playing badminton. My younger brother is very keen on fishing. Every Sunday morning, he goes to the river with his friends. My wife's hobby is gardening; she grows vegetables on our balcony. This weekend, we plan to visit my parents. On Saturday afternoon, I will work out at the gym, and in the evening, we will hang out with some old friends at a coffee shop. I look forward to a relaxing weekend.",
+ q:[["The writer's wife grows vegetables.",true],["The writer will go fishing on Saturday.",false]],
+ x:"Viết 5 câu về sở thích của anh và kế hoạch cuối tuần này."},
+{t:"Nêu ý kiến và trò chuyện",e:"Opinions and small talk",i:"💬",
+ w:[["I agree","tôi đồng ý","👍"],["by the way","nhân tiện","🔀"],["what do you think","anh/chị nghĩ sao","🗳️"],["in my opinion","theo tôi","💭"],["on the other hand","mặt khác","⚖️"],["that makes sense","nghe hợp lý","💡"],["to be honest","thành thật mà nói","😅"],["I'm not sure","tôi không chắc","🤔"]],
+ p:"At a wedding party, Quang chats with a man at his table. “The food here is great, isn't it?” “Yes, I agree. By the way, how do you know the bride?” “We worked together at a bank. What do you think about working in banking?” “In my opinion, it's a stable job. On the other hand, the pressure can be very high.” “That makes sense. To be honest, I left banking last year to work in insurance.” “Really? Is it better?” “I'm not sure yet, but I'm learning a lot.”",
+ q:[["Quang still works in banking.",false],["The man thinks banking is a stable job.",true]],
+ x:"Viết 5 câu nêu quan điểm về câu hỏi: “Có nên dùng điện thoại nhiều mỗi ngày?”, dùng ít nhất 3 cụm từ nêu ý kiến."}
+]};
+
+const M2={id:"m2",name:"Tài chính – Bảo hiểm",en:"Finance and Insurance",color:"--m2",icon:"🛡️",
+persona:"a customer or colleague in banking and life insurance",
+months:[
+ {lv:"A2+",name:"Tài chính cá nhân và ngân hàng",can:"Nói về ngân sách, tài khoản, lãi suất, khoản vay."},
+ {lv:"B1",name:"Tư vấn bảo hiểm nhân thọ",can:"Giải thích hợp đồng, khai thác nhu cầu, xử lý từ chối, hậu mãi."},
+ {lv:"B1+",name:"Phân tích và tuân thủ",can:"Trao đổi về đầu tư, báo cáo tài chính, chỉ số ngành, đạo đức nghề."}
+],
+weeks:[
+{t:"Tiền và ngân sách cá nhân",e:"Money and personal budget",i:"💰",
+ w:[["budget","ngân sách","📒"],["income","thu nhập","💵"],["expenses","chi phí, khoản chi","🧾"],["spend on","chi tiêu vào","🛍️"],["track","theo dõi","📊"],["save money","tiết kiệm tiền","🐷"],["emergency fund","quỹ dự phòng khẩn cấp","🆘"],["debt","khoản nợ","⛓️"]],
+ p:"Personal finance starts with a simple budget. First, write down your monthly income, including your salary and any bonuses. Next, list your expenses, such as rent, food, school fees and transport. Many people are surprised by how much they spend on small things like coffee and online shopping. A useful habit is to track every payment for one month. Try to save money before you spend, not after. Financial planners often suggest keeping an emergency fund of three to six months of expenses. If you have debt, pay off the loans with the highest interest rate first.",
+ q:[["An emergency fund often covers three to six months of expenses.",true],["You should save money only after spending.",false]],
+ x:"Viết 5 câu mô tả cách anh quản lý ngân sách gia đình hằng tháng."},
+{t:"Tài khoản và ngân hàng số",e:"Bank accounts and digital banking",i:"🏦",
+ w:[["current account","tài khoản thanh toán","🏦"],["savings account","tài khoản tiết kiệm","💰"],["mobile banking","ngân hàng trên điện thoại","📱"],["balance","số dư","🔢"],["transfer","chuyển khoản","🔁"],["transaction","giao dịch","🔄"],["statement","sao kê","📃"],["OTP","mã xác thực một lần","🔐"]],
+ p:"Most customers open a current account to receive their salary and pay bills. Money in a current account earns little or no interest, so many people also open a savings account. With mobile banking, you can check your balance, make a transfer and pay bills at any time. Every transaction appears on your monthly statement. To protect customers, banks send an OTP, a one-time password, to confirm important payments. Remember that bank staff should never ask for your OTP. If someone does, it is probably a scam.",
+ q:[["Bank staff may ask for your OTP by phone.",false],["You can make a transfer with mobile banking.",true]],
+ x:"Viết 4–5 câu hướng dẫn một khách hàng lớn tuổi dùng ứng dụng ngân hàng an toàn."},
+{t:"Tiết kiệm và lãi suất",e:"Saving and interest",i:"📈",
+ w:[["term deposit","tiền gửi có kỳ hạn","⏳"],["interest rate","lãi suất","📈"],["maturity","ngày đáo hạn","🎯"],["withdraw","rút tiền","📤"],["compound interest","lãi kép","❄️"],["deposit","khoản tiền gửi","📥"],["inflation","lạm phát","🎈"],["real return","lợi suất thực","🔍"]],
+ p:"When you put money in a term deposit, the bank pays you interest at a fixed interest rate until maturity. If you withdraw the money early, you may receive a lower rate. Over many years, compound interest makes a big difference: you earn interest not only on your deposit but also on the interest you have already received. However, savers should also think about inflation. If your deposit earns five percent a year but prices rise by four percent, your real return is only about one percent.",
+ q:[["Withdrawing early usually gives you a higher rate.",false],["Real return takes inflation into account.",true]],
+ x:"Viết 5 câu giải thích cho khách hàng sự khác nhau giữa lãi suất danh nghĩa và lợi suất thực."},
+{t:"Tín dụng và khoản vay",e:"Loans and credit",i:"💳",
+ w:[["lender","bên cho vay","🏛️"],["borrower","bên vay","🙋"],["collateral","tài sản bảo đảm","🏠"],["credit score","điểm tín dụng","⭐"],["disbursement","giải ngân","💸"],["instalment","kỳ trả góp","🗓️"],["principal","nợ gốc","🧱"],["overdue","quá hạn","🚨"]],
+ p:"A loan is an agreement between a lender and a borrower. For a large loan, such as a home loan, the bank usually asks for collateral, for example a house or land. The bank also checks the borrower's credit score and income. After the contract is signed, the bank makes the disbursement. Each month, the borrower pays an instalment, which includes part of the principal and the interest. If a payment is overdue, the borrower may pay a penalty, and the late payment can affect future loan applications.",
+ q:[["Each instalment includes principal and interest.",true],["Disbursement happens before the contract is signed.",false]],
+ x:"Viết 5 câu giải thích quy trình vay mua nhà cho một khách hàng."},
+{t:"Nền tảng bảo hiểm nhân thọ",e:"Life insurance basics",i:"🛡️",
+ w:[["policy","hợp đồng bảo hiểm","📄"],["policyholder","bên mua bảo hiểm","🖊️"],["premium","phí bảo hiểm","💳"],["the insured","người được bảo hiểm","🧍"],["policy term","thời hạn hợp đồng","📆"],["sum assured","số tiền bảo hiểm","🛡️"],["beneficiary","người thụ hưởng","🎁"],["rider","sản phẩm bổ trợ","➕"]],
+ p:"A life insurance contract is called a policy. The policyholder signs the contract and pays the premium. The insured is the person whose life and health are covered; often this is the policyholder, but it can be a child or a spouse. If the insured dies during the policy term, the insurer pays the sum assured to the beneficiary. Customers can add a rider, such as hospital or critical illness benefits, to increase their coverage. Many advisors believe that choosing the right sum assured is more important than choosing the cheapest premium.",
+ q:[["The beneficiary always pays the premium.",false],["A rider can increase coverage.",true]],
+ x:"Viết 5 câu giải thích vai trò của bên mua bảo hiểm, người được bảo hiểm và người thụ hưởng."},
+{t:"Phân tích nhu cầu tài chính",e:"Financial needs analysis",i:"🧭",
+ w:[["fact-finding","khai thác thông tin","🔎"],["dependants","người phụ thuộc","🧒"],["financial goals","mục tiêu tài chính","🎯"],["education fund","quỹ học vấn","🎓"],["retirement","nghỉ hưu","🏖️"],["income replacement","thay thế thu nhập","🧯"],["protection gap","khoảng trống bảo vệ","🕳️"],["affordable","vừa khả năng chi trả","✅"]],
+ p:"Good advisors start with fact-finding, not with a product. They ask about the customer's dependants, income, debts and financial goals. A common goal is an education fund for the children; another is a comfortable retirement. The advisor then estimates how much money the family would need if the main earner could no longer work. This is the income replacement need. The difference between this need and the customer's existing savings and insurance is called the protection gap. Finally, the advisor recommends a plan that is affordable over the long term.",
+ q:[["The protection gap is the family's total income.",false],["Good advisors start with fact-finding.",true]],
+ x:"Viết 5 câu hỏi khai thác nhu cầu (bằng tiếng Anh) anh sẽ hỏi một khách hàng mới."},
+{t:"Trình bày và xử lý từ chối",e:"Presenting and handling objections",i:"🤝",
+ w:[["objection","lời từ chối, phản đối","🙅"],["think it over","suy nghĩ thêm","🤔"],["acknowledge","ghi nhận","👂"],["concern","mối băn khoăn","😟"],["trust","niềm tin","🫱"],["benefit illustration","bảng minh họa quyền lợi","📑"],["value","giá trị","💎"],["follow-up","buổi liên hệ lại","📞"]],
+ p:"Customers often raise an objection such as “It's too expensive” or “I need to think it over.” A professional advisor does not argue. First, acknowledge the customer's concern: “I understand why you feel that way.” Then ask a question to find the real reason. Sometimes the issue is price; sometimes it is a lack of trust in insurance. The advisor can use a benefit illustration to show what the family receives and when. Focus on value, not only on cost. Finally, respect the decision and agree on a clear follow-up date.",
+ q:[["Advisors should argue strongly with customers.",false],["A benefit illustration shows what the family receives.",true]],
+ x:"Viết đoạn phản hồi 4–5 câu khi khách nói: “Tôi thấy gửi tiết kiệm ngân hàng an toàn hơn.”"},
+{t:"Hậu mãi và giải quyết quyền lợi",e:"Claims and after-sales service",i:"📨",
+ w:[["after-sales","hậu mãi","🧰"],["claim","yêu cầu giải quyết quyền lợi","📨"],["supporting documents","chứng từ kèm theo","📎"],["free-look period","thời gian cân nhắc","👀"],["grace period","thời gian gia hạn đóng phí","⏳"],["lapse","mất hiệu lực","🥀"],["reinstatement","khôi phục hiệu lực","🔄"],["surrender value","giá trị hoàn lại","💱"]],
+ p:"Good after-sales service builds long-term trust. When a customer is in hospital, the advisor helps them submit a claim with the supporting documents, such as discharge papers and invoices. New customers should know about the free-look period, a short time after receiving the policy when they can cancel under the policy terms. If a premium is late, there is usually a grace period. If the premium is still unpaid after that, the policy may lapse. The customer can often apply for reinstatement. Cancelling early is costly, because the surrender value is usually low in the first years.",
+ q:[["The surrender value is usually high in the first years.",false],["A lapsed policy can often be reinstated.",true]],
+ x:"Viết email 5 câu hướng dẫn khách hàng nộp hồ sơ yêu cầu chi trả quyền lợi nằm viện."},
+{t:"Đầu tư và rủi ro",e:"Investment and risk",i:"📊",
+ w:[["portfolio","danh mục đầu tư","🧺"],["bond","trái phiếu","📜"],["stocks","cổ phiếu","📊"],["return","lợi nhuận, suất sinh lời","📈"],["volatility","mức biến động","🎢"],["liquidity","tính thanh khoản","💧"],["diversification","đa dạng hóa","🧩"],["risk tolerance","mức chấp nhận rủi ro","🎚️"]],
+ p:"An investment portfolio may include cash, bonds, stocks and real estate. Each asset has a different level of return, risk and liquidity. Stocks may offer higher long-term returns, but their prices often show high volatility. A government bond is usually less risky, but its return is lower. Cash has the highest liquidity, which means you can use it quickly. Diversification means spreading money across different assets so that a loss in one area does not destroy the whole portfolio. Before investing, an advisor should assess the client's risk tolerance and time horizon.",
+ q:[["Cash has the highest liquidity.",true],["Diversification means putting all your money in one stock.",false]],
+ x:"Viết 5 câu tư vấn cho một người 30 tuổi muốn đầu tư lần đầu."},
+{t:"Báo cáo tài chính",e:"Financial statements",i:"🧾",
+ w:[["income statement","báo cáo kết quả kinh doanh","🧾"],["revenue","doanh thu","💹"],["net profit","lợi nhuận ròng","🏁"],["balance sheet","bảng cân đối kế toán","⚖️"],["assets","tài sản","🏗️"],["liabilities","nợ phải trả","⛓️"],["equity","vốn chủ sở hữu","🧱"],["cash flow","dòng tiền","🔄"]],
+ p:"Companies report their performance in three main financial statements. The income statement shows revenue, expenses and net profit over a period, such as a year. The balance sheet shows what the company owns and owes at one point in time. On the balance sheet, assets must equal liabilities plus equity. The cash flow statement shows how cash moves in and out through operating, investing and financing activities. A company can report a profit but still have problems if its cash flow is weak.",
+ q:[["Assets equal liabilities plus equity.",true],["The balance sheet shows revenue over a whole year.",false]],
+ x:"Viết 5 câu mô tả tình hình tài chính của một doanh nghiệp giả định dựa trên ba báo cáo."},
+{t:"Chỉ số ngân hàng và bảo hiểm",e:"Key ratios for banks and insurers",i:"📐",
+ w:[["ratio","tỷ số, chỉ số","➗"],["ROA","tỷ suất sinh lời trên tài sản","📐"],["ROE","tỷ suất sinh lời trên vốn chủ sở hữu","📏"],["net interest margin","biên lãi ròng (NIM)","↕️"],["non-performing loan","nợ xấu","🚩"],["capital adequacy ratio","hệ số an toàn vốn (CAR)","🛡️"],["loss ratio","tỷ lệ bồi thường","📉"],["persistency","tỷ lệ duy trì hợp đồng","🔗"]],
+ p:"Analysts use a ratio to compare one financial institution with another. ROA, or return on assets, equals net profit divided by total assets. ROE, or return on equity, equals net profit divided by shareholders' equity. For banks, the net interest margin compares net interest income with earning assets. The non-performing loan ratio shows the share of bad loans in total loans and reflects asset quality. The capital adequacy ratio compares a bank's capital with its risk-weighted assets. For insurers, the loss ratio compares claims with premiums, while persistency shows the percentage of policies that remain in force after a period, such as thirteen months.",
+ q:[["ROE equals net profit divided by total assets.",false],["Persistency shows how many policies remain in force.",true]],
+ x:"Viết 5 câu nhận xét tình huống giả định: ROA của một ngân hàng tăng nhưng tỷ lệ nợ xấu cũng tăng."},
+{t:"Quy định, tuân thủ, đạo đức",e:"Regulation, compliance and ethics",i:"⚖️",
+ w:[["regulation","quy định pháp lý","📜"],["compliance","tuân thủ","✅"],["disclosure","công bố thông tin","📢"],["mis-selling","bán sai nhu cầu","🚫"],["suitability","sự phù hợp","🧷"],["conflict of interest","xung đột lợi ích","⚔️"],["confidentiality","bảo mật","🤐"],["anti-money laundering","phòng chống rửa tiền","🧼"]],
+ p:"Financial services are strictly controlled by regulation, so every company has a compliance team. Advisors must follow rules on disclosure: customers should clearly understand the fees, risks and benefits before they sign. Selling a product that does not match the customer's needs is called mis-selling, and it damages trust in the whole industry. Suitability means the product fits the customer's goals, budget and risk profile. Staff must also avoid any conflict of interest and protect the confidentiality of customer data. Under anti-money laundering rules, unusual transactions must be checked and reported.",
+ q:[["Mis-selling means selling a product that fits the customer's needs.",false],["Customers should understand the fees before they sign.",true]],
+ x:"Viết 5 câu về một tình huống tư vấn có thể gây xung đột lợi ích và cách anh xử lý."}
+]};
+
+const M3={id:"m3",name:"Nghiên cứu khoa học",en:"Research English (Finance)",color:"--m3",icon:"🔬",
+persona:"a university lecturer or fellow researcher in finance and banking",
+months:[
+ {lv:"B1",name:"Nền tảng nghiên cứu",can:"Mô tả quy trình, tổng quan tài liệu, giả thuyết, biến và mô hình."},
+ {lv:"B1+",name:"Đo lường và định lượng",can:"Nói về mẫu, thang đo, thống kê mô tả, hồi quy và mức ý nghĩa."},
+ {lv:"B2",name:"Kinh tế lượng và công bố",can:"Dùng chỉ số tài chính, dữ liệu bảng, viết abstract, trao đổi học thuật."}
+],
+weeks:[
+{t:"Quy trình nghiên cứu",e:"The research process",i:"🔬",
+ w:[["research problem","vấn đề nghiên cứu","❗"],["objective","mục tiêu","🎯"],["methodology","phương pháp luận","🛠️"],["sample","mẫu","🫙"],["data collection","thu thập dữ liệu","📥"],["analysis","phân tích","🧮"],["findings","kết quả nghiên cứu","💡"],["contribution","đóng góp","🏅"]],
+ p:"Scientific research follows a clear process. It starts with a research problem, an issue that is important but not yet well explained. The researcher then sets an objective, for example to examine how digital services affect customer satisfaction in banking. Next comes the methodology: the design, the sample and the methods. After data collection, the researcher performs the analysis, often with statistical software. The findings are compared with previous studies. Finally, the researcher explains the contribution of the study to theory and practice.",
+ q:[["Data collection comes before analysis.",true],["The research problem is defined at the end of the process.",false]],
+ x:"Viết 5 câu mô tả quy trình của một nghiên cứu tài chính anh từng đọc."},
+{t:"Tổng quan tài liệu và trích dẫn",e:"Literature review and citation",i:"📚",
+ w:[["literature review","tổng quan tài liệu","📚"],["synthesize","tổng hợp","🧵"],["research gap","khoảng trống nghiên cứu","🕳️"],["peer-reviewed","được bình duyệt","🧐"],["journal","tạp chí khoa học","📰"],["citation","trích dẫn","🔗"],["reference list","danh mục tài liệu tham khảo","📇"],["plagiarism","đạo văn","🚫"]],
+ p:"A literature review is more than a summary of papers. The researcher must synthesize previous studies, compare their results and identify a research gap. Good sources are peer-reviewed articles published in a recognized journal. Each idea taken from another author needs a citation in the text and a full entry in the reference list. Common styles include APA and Harvard. Copying other people's words or ideas without citation is plagiarism, which is a serious academic offense. Reference managers such as Zotero or Mendeley help researchers organize their sources.",
+ q:[["Plagiarism is acceptable if the source is old.",false],["A literature review should identify a research gap.",true]],
+ x:"Viết 5 câu tóm tắt bằng lời của anh một bài báo tài chính đã đọc, có trích dẫn tác giả và năm."},
+{t:"Câu hỏi nghiên cứu và giả thuyết",e:"Research questions and hypotheses",i:"❓",
+ w:[["research question","câu hỏi nghiên cứu","❓"],["hypothesis","giả thuyết","🔮"],["positive relationship","quan hệ cùng chiều","➕"],["negative relationship","quan hệ ngược chiều","➖"],["test","kiểm định","🧪"],["null hypothesis","giả thuyết không (H0)","0️⃣"],["reject","bác bỏ","❌"],["support","ủng hộ (kết quả)","✔️"]],
+ p:"A research question asks what the study wants to know, for example: “Does bank size affect profitability?” A hypothesis is a clear statement that answers the question in advance, such as: “Bank size has a positive relationship with ROA.” Some hypotheses predict a negative relationship, for instance between credit risk and profitability. The researcher then needs data to test each statement. In statistics, the null hypothesis states that there is no effect. After the analysis, the researcher may reject the null hypothesis if the evidence is strong. Researchers usually say that the results support a hypothesis, not that they prove it.",
+ q:[["The null hypothesis states that there is no effect.",true],["Researchers usually say their results prove a hypothesis.",false]],
+ x:"Viết một câu hỏi nghiên cứu và hai giả thuyết về quan hệ giữa chuyển đổi số và lợi nhuận ngân hàng."},
+{t:"Biến số và mô hình",e:"Variables and models",i:"🧩",
+ w:[["dependent variable","biến phụ thuộc","🎯"],["independent variable","biến độc lập","🎛️"],["control variable","biến kiểm soát","🧷"],["proxy","biến đại diện","🪪"],["construct","khái niệm nghiên cứu","🧩"],["mediator","biến trung gian","🌉"],["moderator","biến điều tiết","🔧"],["conceptual framework","khung khái niệm, mô hình","🗺️"]],
+ p:"In a quantitative model, the dependent variable is the outcome the researcher wants to explain, such as bank profitability. An independent variable is a factor that may influence it, such as bank size or digital investment. A control variable is included to reduce bias, for example inflation or GDP growth. When an idea cannot be measured directly, researchers use a proxy, such as ROA for profitability. In survey research, each abstract concept is called a construct. A mediator explains how an effect happens, while a moderator changes the strength of the effect. All of these relationships are shown in the conceptual framework.",
+ q:[["ROA can be used as a proxy for profitability.",true],["A moderator explains how an effect happens.",false]],
+ x:"Viết 5 câu mô tả một mô hình nghiên cứu: biến phụ thuộc, biến độc lập, biến kiểm soát."},
+{t:"Chọn mẫu và thu thập dữ liệu",e:"Sampling and data collection",i:"🎯",
+ w:[["population","tổng thể","👥"],["random sampling","chọn mẫu ngẫu nhiên","🎲"],["convenience sampling","chọn mẫu thuận tiện","🚪"],["biased","bị thiên lệch","↘️"],["sample size","cỡ mẫu","🔢"],["questionnaire","bảng câu hỏi","📋"],["response rate","tỷ lệ phản hồi","📬"],["secondary data","dữ liệu thứ cấp","🗄️"]],
+ p:"The population is the whole group the researcher wants to study, for example all individual customers of commercial banks in a region. Because it is impossible to survey everyone, the researcher selects a sample. With random sampling, every member has an equal chance to be selected, which supports generalization. Convenience sampling is faster and cheaper, but the results may be biased. The sample size depends on the number of variables and the analysis method. Primary data are often collected with a questionnaire, and the response rate should be reported. Many finance studies instead use secondary data from annual reports or databases.",
+ q:[["Convenience sampling always avoids bias.",false],["Secondary data can come from annual reports.",true]],
+ x:"Viết 5 câu mô tả cách anh sẽ chọn mẫu và thu thập dữ liệu cho một khảo sát khách hàng ngân hàng."},
+{t:"Đo lường: thang đo, độ tin cậy, giá trị",e:"Measurement: scales, reliability, validity",i:"📏",
+ w:[["item","biến quan sát","🔘"],["Likert scale","thang đo Likert","📶"],["reliability","độ tin cậy","🧱"],["Cronbach's alpha","hệ số Cronbach's alpha","🅰️"],["validity","giá trị (tính hợp lệ)","✅"],["convergent validity","giá trị hội tụ","🔽"],["discriminant validity","giá trị phân biệt","↔️"],["pilot test","khảo sát thử","🧪"]],
+ p:"Each survey construct is usually measured with more than one item on a Likert scale, for example from 1 (strongly disagree) to 5 (strongly agree). Reliability means the items measure a construct consistently. A common indicator is Cronbach's alpha; values above 0.7 are generally considered acceptable. Validity means the items measure what they are supposed to measure. Convergent validity shows that items of the same construct are strongly related, while discriminant validity shows that different constructs are truly distinct. Before the main survey, a pilot test with a small group helps researchers improve unclear questions.",
+ q:[["A Cronbach's alpha above 0.7 is generally acceptable.",true],["Discriminant validity shows that different constructs are the same.",false]],
+ x:"Viết 3–4 câu hỏi khảo sát theo thang Likert để đo “niềm tin vào ngân hàng số”."},
+{t:"Thống kê mô tả",e:"Descriptive statistics",i:"📊",
+ w:[["mean","giá trị trung bình","⚖️"],["median","trung vị","🎚️"],["standard deviation","độ lệch chuẩn","〰️"],["minimum","giá trị nhỏ nhất","⬇️"],["maximum","giá trị lớn nhất","⬆️"],["outlier","giá trị ngoại lai","🦄"],["skewness","độ lệch phân phối","↗️"],["percentage","tỷ lệ phần trăm","💯"]],
+ p:"Descriptive statistics summarize the data before testing hypotheses. The mean is the average value, while the median is the middle value when data are sorted. When there are extreme values, the median is often more informative than the mean. The standard deviation shows how widely values spread around the mean. Researchers also report the minimum and maximum of each variable. An outlier is an observation that is very different from the others; it may be an error or a real but unusual case. Skewness describes whether the distribution is symmetric. For categorical data such as gender, a percentage is more useful.",
+ q:[["The median is the middle value of sorted data.",true],["An outlier is always a data error.",false]],
+ x:"Viết 5 câu mô tả bảng thống kê giả định: ROA trung bình 1,2%, độ lệch chuẩn 0,8%, nhỏ nhất −0,5%, lớn nhất 3,1%."},
+{t:"Hồi quy và mức ý nghĩa",e:"Regression and significance",i:"📉",
+ w:[["regression","hồi quy","📉"],["coefficient","hệ số","🔢"],["standard error","sai số chuẩn","🎯"],["p-value","giá trị p","🅿️"],["statistically significant","có ý nghĩa thống kê","⭐"],["R-squared","hệ số xác định R²","🟦"],["correlation","tương quan","🪢"],["causation","quan hệ nhân quả","➡️"]],
+ p:"Regression analysis estimates how independent variables affect a dependent variable. Each coefficient shows the expected change in the dependent variable when one independent variable increases by one unit, holding the others constant. The standard error measures the precision of the coefficient. The p-value is the probability of observing a result at least as extreme as this one if the null hypothesis were true. When the p-value is below 0.05, the effect is usually called statistically significant at the 5% level. R-squared shows the proportion of variation explained by the model. Remember that correlation does not prove causation.",
+ q:[["A p-value below 0.05 is usually called significant at the 5% level.",true],["Correlation always proves causation.",false]],
+ x:"Viết 4–5 câu diễn giải kết quả hồi quy giả định: hệ số quy mô ngân hàng = 0,35; p = 0,01; R² = 0,42."},
+{t:"Chỉ số tài chính trong nghiên cứu",e:"Financial measures in research",i:"🏛️",
+ w:[["profitability","khả năng sinh lời","💰"],["asset quality","chất lượng tài sản","🩺"],["liquidity","thanh khoản","💧"],["leverage","đòn bẩy tài chính","🏋️"],["firm size","quy mô doanh nghiệp","🏢"],["market value","giá trị thị trường","🏷️"],["earnings per share","lợi nhuận trên mỗi cổ phiếu (EPS)","🧮"],["dividend yield","tỷ suất cổ tức","🌾"]],
+ p:"Finance research often measures profitability with ROA, ROE or net interest margin. Asset quality in banking is usually measured with the non-performing loan ratio or loan loss provisions. Liquidity can be measured as liquid assets over total assets, while leverage is often measured as total debt over total assets or over equity. Firm size is commonly the natural logarithm of total assets. For listed companies, researchers also study market value, earnings per share and dividend yield. Researchers should always define each measure clearly, because different studies may use different formulas.",
+ q:[["Firm size is often measured as the logarithm of total assets.",true],["All studies use the same formula for leverage.",false]],
+ x:"Viết 5 câu định nghĩa cách đo ba biến tài chính anh sẽ dùng trong một nghiên cứu."},
+{t:"Dữ liệu bảng và kiểm định độ vững",e:"Panel data and robustness",i:"🧪",
+ w:[["panel data","dữ liệu bảng","🗂️"],["fixed effects","mô hình tác động cố định","📌"],["random effects","mô hình tác động ngẫu nhiên","🎲"],["Hausman test","kiểm định Hausman","⚗️"],["multicollinearity","đa cộng tuyến","🕸️"],["endogeneity","nội sinh","🔄"],["lagged variable","biến trễ","⏮️"],["robustness check","kiểm định độ vững","🛡️"]],
+ p:"Many banking studies use panel data, which follow the same banks over several years. Two common models are fixed effects and random effects. The Hausman test helps researchers choose between them. Before estimation, researchers check multicollinearity, which occurs when independent variables are highly correlated with each other. A serious concern is endogeneity, when an explanatory variable is correlated with the error term, for example because of reverse causality. Methods such as GMM, often using a lagged variable as an instrument, can help address this problem. Finally, a robustness check, such as using another proxy or a sub-sample, shows whether the main results remain stable.",
+ q:[["The Hausman test helps choose between fixed and random effects.",true],["Multicollinearity means the sample is too large.",false]],
+ x:"Viết 4–5 câu giải thích cho hội đồng vì sao nghiên cứu dùng GMM và kiểm định độ vững."},
+{t:"Cấu trúc bài báo và abstract",e:"Paper structure and abstract",i:"✍️",
+ w:[["introduction","phần mở đầu","🚪"],["results","kết quả","📊"],["discussion","phần thảo luận","💬"],["conclusion","kết luận","🏁"],["abstract","tóm tắt","📝"],["implications","hàm ý","💡"],["limitation","hạn chế","🚧"],["keywords","từ khóa","🔑"]],
+ p:"Most empirical papers follow the IMRaD structure: introduction, methods, results and discussion, followed by a conclusion. The abstract, often 150 to 250 words, summarizes the purpose, method, main findings and implications. The introduction explains the problem and the research gap. The results section reports what was found without interpretation, while the discussion explains what the results mean and compares them with earlier studies. Authors should state each limitation honestly and suggest future research. Finally, they choose four to six keywords so that other researchers can find the paper.",
+ q:[["The discussion compares the results with earlier studies.",true],["Limitations should be hidden from readers.",false]],
+ x:"Viết abstract 5–6 câu cho một nghiên cứu giả định về tác động của ngân hàng số đến lợi nhuận ngân hàng."},
+{t:"Bình duyệt, hội thảo, thư học thuật",e:"Peer review, conferences and emails",i:"🎤",
+ w:[["submission","bài nộp","📤"],["reviewer","người phản biện","🧐"],["accepted","được chấp nhận","🎉"],["rejected","bị từ chối","📭"],["revise and resubmit","chỉnh sửa và nộp lại","🔁"],["presentation","bài trình bày","🎤"],["Q&A session","phiên hỏi đáp","🙋"],["Dear Professor","Kính gửi Giáo sư","✉️"]],
+ p:"After a submission, the journal editor checks whether the paper fits the journal. If it does, the paper is sent to at least one reviewer, often two or three. The decision may be accepted, rejected, or revise and resubmit. When you revise, reply to every comment politely in a response letter. At a conference, you will give a short presentation, followed by a Q&A session. If a question is difficult, you can say, “Thank you, that's a very good point. I will consider it in my future work.” When writing to a scholar, begin with “Dear Professor” and keep your email short and clear.",
+ q:[["A revise and resubmit decision means the paper is rejected forever.",false],["Authors should reply to every reviewer comment.",true]],
+ x:"Viết email 5–6 câu gửi một giáo sư xin góp ý cho bản thảo bài báo."}
+]};
+
+const X1=[
+[["good morning","chào buổi sáng","🌅","Good morning! Did you sleep well?"],["first name","tên gọi","🔤","My first name is Dinh."],["surname","họ","🪪","My surname is Le."],["call me","cứ gọi tôi là","📛","Please call me Dinh."],["handshake","cái bắt tay","🫱","He gave me a firm handshake."],["welcome","chào mừng","🎊","Welcome to our neighborhood!"],["live in","sống ở","📍","I live in Cao Lanh."],["how old","bao nhiêu tuổi","🎂","How old are your children?"],["married","đã kết hôn","💍","Are you married?"],["single","độc thân","🧍","My cousin is still single."],["take care","bảo trọng","🫡","Bye, take care!"],["what do you do","anh/chị làm nghề gì","❔","What do you do? I'm an engineer."]],
+[["parents","cha mẹ","👥","My parents live in the countryside."],["siblings","anh chị em ruột","🚸","I have two siblings."],["grandparents","ông bà","👴","Our grandparents tell great stories."],["cousin","anh chị em họ","🧒","My cousin studies in Ho Chi Minh City."],["husband","chồng","👨","Her husband is a doctor."],["daughter","con gái","👧","Their daughter is six years old."],["bedroom","phòng ngủ","🛏️","The boys share a bedroom."],["bathroom","phòng tắm","🛁","The bathroom is upstairs."],["balcony","ban công","🪴","We grow flowers on the balcony."],["housework","việc nhà","🧹","We share the housework."],["raise children","nuôi dạy con","🍼","It is not easy to raise children."],["look after","trông nom","👀","Grandma looks after the baby."]],
+[["alarm","chuông báo thức","🔔","My alarm rings at half past five."],["take a shower","tắm vòi sen","🚿","I take a shower every morning."],["brush my teeth","đánh răng","🪥","I brush my teeth after breakfast."],["get dressed","mặc quần áo","👔","I get dressed in five minutes."],["rush hour","giờ cao điểm","🚗","Traffic is heavy at rush hour."],["traffic jam","kẹt xe","🚧","We were stuck in a traffic jam."],["take a nap","chợp mắt","💤","I take a nap after lunch."],["do homework","làm bài tập về nhà","📚","The kids do homework after dinner."],["cook dinner","nấu bữa tối","🍳","Who will cook dinner tonight?"],["weekday","ngày thường","📆","On a weekday, I get up early."],["early","sớm","🐓","I like to start work early."],["late","muộn","🌃","Sorry, I'm late."]],
+[["waiter","người phục vụ","🤵","The waiter brought the menu."],["table for two","bàn cho hai người","🍽️","A table for two, please."],["starter","món khai vị","🥗","We shared a starter."],["dessert","món tráng miệng","🍰","Would you like dessert?"],["vegetarian","món chay, người ăn chay","🥦","Do you have vegetarian dishes?"],["allergic to","dị ứng với","⚠️","I'm allergic to peanuts."],["delicious","ngon","😋","This soup is delicious."],["salty","mặn","🧂","The fish is a bit salty."],["sweet","ngọt","🍬","Vietnamese coffee is very sweet."],["no ice","không đá","🧊","A lemon juice with no ice, please."],["tip","tiền boa","🪙","Do people leave a tip here?"],["enjoy your meal","chúc ngon miệng","🥢","Here's your food. Enjoy your meal!"]],
+[["shop assistant","nhân viên bán hàng","🧑‍💼","The shop assistant was very helpful."],["fitting room","phòng thử đồ","🚪","Where is the fitting room?"],["cheap","rẻ","⬇️","This bag is cheap but good."],["expensive","đắt","💎","That watch is too expensive."],["on sale","đang giảm giá","🏷️","These shoes are on sale."],["bargain","món hời","🤝","It was a real bargain."],["exchange","đổi hàng","🔄","Can I exchange this for a larger size?"],["pay by card","trả bằng thẻ","💳","Can I pay by card?"],["change","tiền thối lại","🪙","Here is your change."],["shopping list","danh sách mua sắm","📝","Don't forget the shopping list."],["queue","hàng người chờ","🧍","There was a long queue at the checkout."],["out of stock","hết hàng","📦","Sorry, that size is out of stock."]],
+[["map","bản đồ","🗺️","Let me check the map on my phone."],["turn right","rẽ phải","➡️","Turn right at the bank."],["corner","góc đường","📐","The shop is on the corner."],["traffic lights","đèn giao thông","🚥","Stop at the traffic lights."],["bridge","cây cầu","🌉","Cross the bridge and turn left."],["roundabout","vòng xoay","⭕","Take the second exit at the roundabout."],["block","dãy phố","🏢","It's two blocks from here."],["get lost","bị lạc","😵‍💫","It's easy to get lost in the old town."],["taxi","xe taxi","🚕","Let's take a taxi."],["ticket","vé","🎫","How much is a ticket to Can Tho?"],["platform","sân ga","🚉","The train leaves from platform two."],["how far","bao xa","📏","How far is it to the station?"]],
+[["cough","ho","😷","I have a bad cough."],["sore throat","đau họng","🗣️","Drink warm water for a sore throat."],["stomachache","đau bụng","🤢","He has a stomachache after lunch."],["dizzy","chóng mặt","💫","I feel dizzy when I stand up."],["medicine","thuốc","💊","Take the medicine after meals."],["side effects","tác dụng phụ","⚠️","Does this medicine have side effects?"],["blood pressure","huyết áp","🩸","The nurse checked my blood pressure."],["check-up","khám sức khỏe định kỳ","📋","I have a check-up every year."],["injury","chấn thương","🩹","He had a knee injury."],["hospital","bệnh viện","🏥","She stayed in hospital for two days."],["get well soon","mau khỏe nhé","💐","Get well soon!"],["health insurance","bảo hiểm y tế","🛡️","Do you have health insurance?"]],
+[["sunny","nắng","☀️","It's sunny today."],["cloudy","nhiều mây","☁️","It's cloudy but warm."],["windy","có gió","💨","It's too windy to go fishing."],["storm","bão","⛈️","A storm is coming tonight."],["thunder","sấm","🌩️","The children are afraid of thunder."],["drought","hạn hán","🏜️","The drought affected the rice harvest."],["degrees","độ (nhiệt độ)","🌡️","It's thirty-four degrees today."],["heatwave","đợt nắng nóng","🥵","Stay indoors during the heatwave."],["raincoat","áo mưa","🧥","Take your raincoat with you."],["climate","khí hậu","🌍","The climate here is hot all year."],["saltwater intrusion","xâm nhập mặn","🧂","Saltwater intrusion is a problem in the dry season."],["get wet","bị ướt","💧","Take an umbrella so you don't get wet."]],
+[["who's calling","ai đang gọi vậy","❔","Sorry, who's calling, please?"],["wrong number","nhầm số","🔢","Sorry, you have the wrong number."],["voicemail","hộp thư thoại","📼","I left a voicemail for her."],["ring","gọi điện","🔔","I'll ring you tonight."],["hang up","cúp máy","📴","Please don't hang up."],["put you through","nối máy","🔌","I'll put you through to the manager."],["battery","pin","🔋","My battery is low."],["charger","bộ sạc","🪫","Can I borrow your charger?"],["video call","cuộc gọi video","📹","Let's have a video call on Zalo."],["reply","trả lời","↩️","Please reply when you can."],["get back to you","phản hồi lại anh/chị","🔙","I'll get back to you tomorrow."],["speak up","nói to lên","🔊","Could you speak up, please?"]],
+[["boarding pass","thẻ lên máy bay","🎟️","Please show your boarding pass."],["gate","cổng ra máy bay","🚪","The flight leaves from gate twelve."],["round trip","khứ hồi","🔁","I booked a round trip to Hanoi."],["aisle seat","ghế cạnh lối đi","💺","Can I have an aisle seat?"],["front desk","quầy lễ tân","🛎️","Leave your key at the front desk."],["check out","trả phòng","🧾","What time do we check out?"],["single room","phòng đơn","🛌","A single room is enough for me."],["view","quang cảnh","🌄","The room has a beautiful river view."],["souvenir","quà lưu niệm","🎁","I bought a souvenir for each of my sons."],["tour guide","hướng dẫn viên","🚩","Our tour guide spoke good English."],["itinerary","lịch trình","🗒️","Here is our itinerary for three days."],["jet lag","mệt do lệch múi giờ","😪","I had jet lag after the long flight."]],
+[["badminton","cầu lông","🏸","We play badminton on Sundays."],["jogging","chạy bộ","🏃","I go jogging in the park."],["gardening","làm vườn","🌱","Gardening helps me relax."],["photography","nhiếp ảnh","📷","She is interested in photography."],["play the guitar","chơi đàn guitar","🎸","My son can play the guitar."],["board game","trò chơi cờ bàn","🎲","We play a board game at night."],["go camping","đi cắm trại","🏕️","Let's go camping next month."],["volunteer","làm tình nguyện","🙌","I volunteer at a local school."],["relax","thư giãn","🧘","I relax by listening to music."],["enjoy","thích, tận hưởng","😊","I really enjoy cooking."],["once a week","mỗi tuần một lần","1️⃣","I swim once a week."],["get together","tụ họp","🥳","Let's get together this weekend."]],
+[["I think so","tôi nghĩ vậy","🙂","Will it rain? I think so."],["I don't think so","tôi không nghĩ vậy","🙃","Is it too late? I don't think so."],["you're right","anh/chị nói đúng","✅","You're right, it's too expensive."],["I see your point","tôi hiểu ý anh/chị","👁️","I see your point, but I disagree."],["disagree","không đồng ý","👎","I'm afraid I disagree."],["absolutely","hoàn toàn đúng","💯","Absolutely, that's a great idea."],["it depends","còn tùy","🔀","Is it worth it? It depends."],["as far as I know","theo tôi biết","📚","As far as I know, the shop is closed."],["exactly","chính xác","🎯","Exactly! That's what I mean."],["for example","ví dụ","📌","Some jobs, for example nursing, are stressful."],["anyway","dù sao thì","↪️","Anyway, let's talk about something else."],["how's it going","dạo này thế nào","🤙","Hi Nam, how's it going?"]]
+];
+
+const X2=[
+[["salary","tiền lương","💵","My salary is paid on the fifth of each month."],["bonus","tiền thưởng","🎁","We get a bonus at Tet."],["fixed costs","chi phí cố định","📌","Rent is one of our fixed costs."],["variable costs","chi phí biến đổi","📊","Food and fuel are variable costs."],["bills","hóa đơn","🧾","I pay the electricity bills online."],["afford","đủ khả năng chi trả","👛","We can't afford a new car this year."],["cut back on","cắt giảm","✂️","We need to cut back on eating out."],["pay off","trả hết (nợ)","✅","I paid off my credit card last month."],["net income","thu nhập ròng","💶","Net income is what you receive after tax."],["tax","thuế","🏛️","Income tax is deducted from salary."],["financial plan","kế hoạch tài chính","🗺️","A financial plan helps you reach your goals."],["pocket money","tiền tiêu vặt","🪙","Our sons get pocket money every week."]],
+[["open an account","mở tài khoản","🆕","I'd like to open an account."],["account number","số tài khoản","🔢","Please check the account number."],["ID card","căn cước công dân","🪪","Bring your ID card to the branch."],["debit card","thẻ ghi nợ","💳","Your debit card is linked to your account."],["credit card","thẻ tín dụng","💳","Pay your credit card on time."],["ATM","máy rút tiền","🏧","The ATM is next to the branch."],["PIN","mã PIN","🔑","Never write your PIN on the card."],["QR code","mã QR","🔳","You can pay by scanning a QR code."],["fee","phí","💲","Is there a fee for online transfers?"],["eKYC","định danh khách hàng điện tử","🤳","You can open an account online with eKYC."],["scam","lừa đảo","🎣","Report any scam to the bank immediately."],["biometric authentication","xác thực sinh trắc học","👆","Large transfers need biometric authentication."]],
+[["savings goal","mục tiêu tiết kiệm","🎯","Our savings goal is a new house."],["annual","hằng năm","📅","The annual interest rate is fixed."],["monthly","hằng tháng","🗓️","Interest is paid monthly."],["principal amount","số tiền gốc","🧱","Interest is calculated on the principal amount."],["early withdrawal","rút trước hạn","⏪","Early withdrawal reduces your interest."],["roll over","tự động tái tục","🔁","The deposit will roll over at maturity."],["nominal rate","lãi suất danh nghĩa","🏷️","The nominal rate does not include inflation."],["purchasing power","sức mua","🛒","Inflation reduces purchasing power."],["certificate of deposit","chứng chỉ tiền gửi","📜","Banks also issue certificates of deposit."],["percent","phần trăm","💯","The rate is six percent a year."],["grow","tăng trưởng","🌱","Your money grows over time."],["long term","dài hạn","🛤️","It is wise to save for the long term."]],
+[["mortgage","khoản vay thế chấp mua nhà","🏡","They took a twenty-year mortgage."],["apply for","nộp hồ sơ xin","📝","I want to apply for a loan."],["approve","phê duyệt","✅","The bank approved the loan."],["loan term","thời hạn vay","⏱️","The loan term is ten years."],["repayment","việc trả nợ","💸","Monthly repayment is due on the tenth."],["guarantor","người bảo lãnh","🤝","He needs a guarantor for the loan."],["default","vỡ nợ","💥","If you default, the bank may sell the collateral."],["refinance","tái cấp vốn","🔄","They refinanced at a lower rate."],["outstanding balance","dư nợ còn lại","📉","Please check your outstanding balance."],["penalty","tiền phạt","⚠️","There is a penalty for late payment."],["credit limit","hạn mức tín dụng","🚧","My credit limit is fifty million dong."],["interest-only","chỉ trả lãi","➗","The first year is interest-only."]],
+[["insurer","công ty bảo hiểm","🏢","The insurer pays the claim."],["life insurance","bảo hiểm nhân thọ","🛡️","Life insurance protects your family."],["term life","bảo hiểm tử kỳ","⏲️","Term life is usually cheaper."],["endowment","bảo hiểm hỗn hợp","🏺","An endowment plan combines savings and protection."],["unit-linked","bảo hiểm liên kết đơn vị","📈","Unit-linked policies invest in funds."],["universal life","bảo hiểm liên kết chung","🔗","Universal life has flexible premiums."],["critical illness","bệnh hiểm nghèo","🎗️","The rider covers critical illness."],["accident","tai nạn","🚑","Accident benefits can be added as a rider."],["death benefit","quyền lợi tử vong","🕊️","The death benefit goes to the beneficiary."],["maturity benefit","quyền lợi đáo hạn","🎓","You receive the maturity benefit at the end of the term."],["exclusion","điều khoản loại trừ","⛔","Read each exclusion carefully."],["underwriting","thẩm định bảo hiểm","🔍","Underwriting may require a health check."]],
+[["open question","câu hỏi mở","💭","Start with an open question."],["closed question","câu hỏi đóng","🔒","A closed question gets a yes or no."],["main earner","trụ cột thu nhập","💪","He is the main earner in the family."],["life stage","giai đoạn cuộc đời","🪜","Needs change with each life stage."],["existing cover","bảo hiểm hiện có","☂️","Do you have any existing cover?"],["mortgage protection","bảo vệ khoản vay mua nhà","🏠","Mortgage protection pays off the loan."],["time horizon","khung thời gian","⏳","Their time horizon is fifteen years."],["priority","ưu tiên","🥇","Protection is the first priority."],["lifestyle","lối sống","🚴","We discussed their lifestyle and habits."],["recommend","đề xuất","👍","I recommend a fifteen-year plan."],["needs-based selling","bán hàng theo nhu cầu","🧭","Our team practices needs-based selling."],["referral","giới thiệu khách hàng","🗣️","Happy clients often give a referral."]],
+[["I understand","tôi hiểu","🤲","I understand your concern."],["too expensive","quá đắt","💸","Many people say it's too expensive at first."],["not interested","không quan tâm","🙅","He said he was not interested."],["clarify","làm rõ","🔍","Let me clarify that point."],["reassure","trấn an","🫂","I reassured her about the claim process."],["testimonial","lời chứng thực của khách","⭐","A real testimonial builds trust."],["close the sale","chốt hợp đồng","🖊️","Don't rush to close the sale."],["buying signal","tín hiệu muốn mua","🚦","Asking about payment is a buying signal."],["peace of mind","sự an tâm","🕊️","Insurance gives peace of mind."],["compare","so sánh","⚖️","Let's compare two options."],["flexible","linh hoạt","🤸","The payment plan is flexible."],["no pressure","không áp lực","😌","There is no pressure; take your time."]],
+[["submit","nộp","📤","Submit the form online."],["claim form","đơn yêu cầu giải quyết quyền lợi","📝","Fill in the claim form."],["hospital invoice","hóa đơn viện phí","🧾","Attach the original hospital invoice."],["discharge papers","giấy ra viện","📄","Bring the discharge papers."],["pay out","chi trả","💰","The insurer paid out quickly."],["deny","từ chối chi trả","❌","The claim was denied because of an exclusion."],["appeal","khiếu nại quyết định","📣","You can appeal the decision."],["due date","ngày đến hạn","📅","Your premium due date is next week."],["auto-debit","trích nợ tự động","🔁","Set up auto-debit for your premiums."],["customer service","dịch vụ khách hàng","☎️","Call customer service for help."],["update","cập nhật","🔄","Please update your address."],["policy review","rà soát hợp đồng định kỳ","🔎","We do a policy review every year."]],
+[["asset","tài sản","🏗️","Gold is a popular asset in Vietnam."],["mutual fund","quỹ mở","🫙","A mutual fund pools money from many investors."],["dividend","cổ tức","🌾","The company pays a dividend each year."],["capital gain","lãi vốn","📈","He made a capital gain on the shares."],["real estate","bất động sản","🏘️","Real estate needs a lot of capital."],["gold","vàng","🥇","Many families keep gold at home."],["risk-free","phi rủi ro","🛡️","No investment is completely risk-free."],["short-term","ngắn hạn","⏱️","This is a short-term investment."],["market price","giá thị trường","💹","The market price changes every day."],["loss","khoản lỗ","📉","Investors may face a loss."],["rebalance","tái cân bằng","⚖️","Rebalance your portfolio once a year."],["shares","cổ phần","🧩","She bought shares in a bank."]],
+[["cost of goods sold","giá vốn hàng bán","📦","Cost of goods sold rose this year."],["gross profit","lợi nhuận gộp","📊","Gross profit equals revenue minus cost of goods sold."],["operating expenses","chi phí hoạt động","🏭","Operating expenses include salaries and rent."],["depreciation","khấu hao","⏳","Depreciation spreads the cost of equipment over time."],["current assets","tài sản ngắn hạn","💵","Cash and receivables are current assets."],["fixed assets","tài sản cố định","🏢","Buildings are fixed assets."],["accounts receivable","khoản phải thu","📥","Accounts receivable increased this quarter."],["accounts payable","khoản phải trả","📤","We must settle accounts payable on time."],["retained earnings","lợi nhuận giữ lại","🏦","Retained earnings are part of equity."],["fiscal year","năm tài chính","📆","Our fiscal year ends in December."],["audit","kiểm toán","🔍","The statements were audited."],["annual report","báo cáo thường niên","📕","Read the annual report first."]],
+[["NPL ratio","tỷ lệ nợ xấu","🚩","The NPL ratio is a key risk indicator."],["cost-to-income ratio","tỷ lệ chi phí trên thu nhập","⚙️","A lower cost-to-income ratio means better efficiency."],["loan-to-deposit ratio","tỷ lệ cho vay trên huy động","🔁","Regulators watch the loan-to-deposit ratio."],["CASA","tiền gửi không kỳ hạn","💧","A higher CASA share lowers funding costs."],["combined ratio","tỷ lệ kết hợp","➕","A combined ratio below 100% means an underwriting profit."],["expense ratio","tỷ lệ chi phí","🧾","The expense ratio compares costs with premiums."],["solvency margin","biên khả năng thanh toán","🛡️","Insurers must keep a minimum solvency margin."],["new business","khai thác mới","🆕","New business premiums grew this year."],["market share","thị phần","🥧","The company has a large market share."],["benchmark","chuẩn so sánh","📏","Compare the ratio with the industry benchmark."],["year-on-year","so với cùng kỳ năm trước","📆","Profit increased year-on-year."],["KPI","chỉ số hiệu quả chính","🎯","Persistency is a key KPI for agents."]],
+[["code of conduct","bộ quy tắc ứng xử","📘","All agents must follow the code of conduct."],["license","chứng chỉ hành nghề","🪪","Agents need a license to sell insurance."],["consent","sự đồng ý","✍️","We need the customer's consent to use their data."],["personal data","dữ liệu cá nhân","🗂️","Protect personal data carefully."],["complaint","khiếu nại","📣","Handle every complaint quickly."],["fraud","gian lận","🕵️","Report any suspected fraud."],["transparency","tính minh bạch","🔍","Transparency builds trust."],["misleading","gây hiểu lầm","🌀","Never make misleading promises."],["audit trail","dấu vết kiểm toán","👣","Keep an audit trail of all advice."],["sanction","chế tài","⚠️","Breaking the rules can lead to a sanction."],["whistleblower","người tố giác","📢","A whistleblower should be protected."],["integrity","sự chính trực","🧭","Integrity is the basis of good advice."]]
+];
+
+const X3=[
+[["empirical","thực nghiệm","🧪","This is an empirical study of Vietnamese banks."],["theory","lý thuyết","📖","The model is based on theory."],["quantitative","định lượng","🔢","We used a quantitative approach."],["qualitative","định tính","💬","Qualitative interviews explore meanings."],["mixed methods","phương pháp hỗn hợp","🔀","The study uses mixed methods."],["research design","thiết kế nghiên cứu","📐","The research design is cross-sectional."],["scope","phạm vi","🔭","The scope is limited to commercial banks."],["research ethics","đạo đức nghiên cứu","⚖️","Research ethics require honesty and consent."],["informed consent","sự đồng thuận có hiểu biết","✍️","All respondents gave informed consent."],["respondent","người trả lời khảo sát","🙋","Each respondent completed the survey."],["practical implications","hàm ý thực tiễn","🛠️","The paper offers practical implications."],["timeline","tiến độ thực hiện","📅","The research timeline is three years."]],
+[["previous studies","các nghiên cứu trước","📚","Previous studies show mixed results."],["mixed results","kết quả không thống nhất","🔀","The literature reports mixed results."],["seminal","kinh điển, nền tảng","🏛️","This is a seminal paper in finance."],["author","tác giả","✒️","The author used panel data."],["et al.","và cộng sự","👥","In APA style, write et al. for three or more authors."],["paraphrase","diễn đạt lại bằng lời mình","🔁","Paraphrase instead of copying."],["direct quotation","trích dẫn nguyên văn","💬","Use direct quotations sparingly."],["database","cơ sở dữ liệu","🗄️","Search each database with the same keywords."],["indexed","được chỉ mục","🔎","The journal is indexed in Scopus."],["impact factor","hệ số ảnh hưởng","📈","Impact factor is one measure of journal influence."],["open access","truy cập mở","🔓","The article is open access."],["DOI","mã định danh số của bài báo","🏷️","Include the DOI in your reference."]],
+[["research objective","mục tiêu nghiên cứu","🎯","The research objective must be clear."],["testable","kiểm định được","🧪","A good hypothesis is testable."],["predict","dự báo","🔮","Theory predicts a positive effect."],["effect","tác động","💥","We found a strong effect."],["direct effect","tác động trực tiếp","➡️","The direct effect is significant."],["indirect effect","tác động gián tiếp","↪️","The indirect effect works through trust."],["alternative hypothesis","giả thuyết đối","🅰️","The alternative hypothesis states that an effect exists."],["evidence","bằng chứng","🧾","The evidence supports H1."],["fail to reject","không bác bỏ được","🤷","We fail to reject the null hypothesis."],["theoretical basis","cơ sở lý thuyết","🏗️","Each hypothesis needs a theoretical basis."],["supported","được ủng hộ","👍","H1 is supported."],["confirm","xác nhận","✅","The results confirm earlier studies."]],
+[["measure","đo lường","📏","We measure trust with four items."],["operationalize","thao tác hóa","🔧","We operationalize size as the log of total assets."],["latent variable","biến tiềm ẩn","👻","Loyalty is a latent variable."],["observed variable","biến quan sát","👁️","Each item is an observed variable."],["dummy variable","biến giả","🔘","Ownership is a dummy variable equal to 0 or 1."],["continuous variable","biến liên tục","〰️","Age is a continuous variable."],["categorical variable","biến phân loại","🗃️","Gender is a categorical variable."],["path","đường dẫn quan hệ","➰","Each arrow is a path in the model."],["interaction term","biến tương tác","✖️","We added an interaction term."],["omitted variable","biến bị bỏ sót","🕳️","An omitted variable can cause bias."],["research model","mô hình nghiên cứu","🧭","Figure 1 shows the research model."],["lag","độ trễ","⏮️","We use a one-year lag."]],
+[["sampling frame","khung chọn mẫu","🖼️","The customer list is the sampling frame."],["stratified sampling","chọn mẫu phân tầng","🍰","Stratified sampling ensures each group is included."],["representative","mang tính đại diện","🎯","The sample should be representative."],["non-response bias","sai lệch do không phản hồi","🔇","We tested for non-response bias."],["online survey","khảo sát trực tuyến","💻","We ran an online survey."],["interview","phỏng vấn","🎙️","Ten managers were interviewed."],["primary data","dữ liệu sơ cấp","📝","Primary data come from the survey."],["valid responses","phiếu trả lời hợp lệ","✅","Report the number of valid responses."],["screening question","câu hỏi sàng lọc","🚦","A screening question removes non-customers."],["cross-sectional","dữ liệu chéo (một thời điểm)","⏸️","This is a cross-sectional survey."],["longitudinal","dữ liệu theo thời gian","📈","Longitudinal data track changes over time."],["rule of thumb","quy tắc kinh nghiệm","👍","One rule of thumb links sample size to the number of indicators."]],
+[["scale","thang đo","📏","We adapted the scale from prior studies."],["adapt","điều chỉnh cho phù hợp","🔧","Items were adapted to the banking context."],["factor loading","hệ số tải nhân tố","🏋️","Each factor loading should ideally be above 0.7."],["AVE","phương sai trích trung bình","📦","AVE above 0.5 supports convergent validity."],["composite reliability","độ tin cậy tổng hợp","🧱","Composite reliability should exceed 0.7."],["HTMT","tỷ số HTMT","↔️","HTMT below 0.85 supports discriminant validity."],["EFA","phân tích nhân tố khám phá","🔍","EFA groups items into factors."],["CFA","phân tích nhân tố khẳng định","✔️","CFA tests the measurement model."],["back-translation","dịch ngược","🔁","We used back-translation for the questionnaire."],["expert review","lấy ý kiến chuyên gia","🧑‍🏫","An expert review checked content validity."],["common method bias","sai lệch do phương pháp chung","⚠️","We tested for common method bias."],["measurement model","mô hình đo lường","🧩","First, assess the measurement model."]],
+[["variance","phương sai","📐","Variance is the square of the standard deviation."],["range","khoảng biến thiên","↕️","The range is the maximum minus the minimum."],["distribution","phân phối","📊","The distribution is close to normal."],["normal distribution","phân phối chuẩn","🔔","Many tests assume a normal distribution."],["kurtosis","độ nhọn","⛰️","Kurtosis describes the tails of a distribution."],["frequency","tần suất","🔁","The table shows the frequency of each answer."],["observation","quan sát","👁️","Each bank-year is one observation."],["histogram","biểu đồ tần suất","📶","A histogram shows the distribution."],["average","trung bình","➗","The average age of respondents is reported in Table 1."],["trend","xu hướng","📈","ROA shows an upward trend."],["proportion","tỷ lệ","🥧","Report the proportion of female respondents."],["summary statistics","thống kê tóm tắt","📋","Table 2 reports summary statistics."]],
+[["OLS","bình phương nhỏ nhất thông thường","📏","We start with an OLS regression."],["intercept","hệ số chặn","📍","The intercept has no clear meaning here."],["residual","phần dư","🧩","Check the residuals for patterns."],["confidence interval","khoảng tin cậy","↔️","The 95% confidence interval excludes zero."],["t-statistic","thống kê t","🔠","A large t-statistic suggests significance."],["heteroskedasticity","phương sai sai số thay đổi","📢","Use robust standard errors for heteroskedasticity."],["VIF","hệ số phóng đại phương sai","🕸️","VIF values below 5 suggest no serious multicollinearity."],["adjusted R-squared","R² hiệu chỉnh","🟪","Adjusted R-squared accounts for extra variables."],["predictor","biến dự báo","🔮","Size is a strong predictor."],["bootstrapping","lấy mẫu lặp (bootstrap)","🔁","PLS-SEM uses bootstrapping to test paths."],["interpret","diễn giải","🗣️","Interpret coefficients carefully."],["control for","kiểm soát (biến)","🧷","We control for inflation and GDP growth."]],
+[["Tobin's Q","chỉ số Tobin's Q","📐","Tobin's Q measures market valuation."],["NIM","biên lãi ròng","↕️","NIM is a key profitability measure for banks."],["Z-score","chỉ số Z (độ ổn định)","🛡️","The Z-score measures bank stability."],["loan loss provisions","dự phòng rủi ro tín dụng","🧯","Higher loan loss provisions signal more risk."],["capital ratio","tỷ lệ vốn","🧱","The capital ratio reflects bank safety."],["ownership structure","cơ cấu sở hữu","🧬","Ownership structure affects risk-taking."],["state-owned","sở hữu nhà nước","🏛️","State-owned banks may behave differently."],["GDP growth","tăng trưởng GDP","🌏","GDP growth is a common macro control variable."],["natural logarithm","logarit tự nhiên","📉","We take the natural logarithm of total assets."],["winsorize","xử lý ngoại lai bằng winsorize","✂️","We winsorize variables at the 1st and 99th percentiles."],["book value","giá trị sổ sách","📚","Book value comes from the balance sheet."],["financial ratio","tỷ số tài chính","➗","Each financial ratio needs a clear formula."]],
+[["cross-section","đơn vị chéo","🏦","The panel has thirty banks in the cross-section."],["time series","chuỗi thời gian","📈","Inflation is a time series."],["balanced panel","bảng cân bằng","⚖️","A balanced panel has no missing years."],["pooled OLS","OLS gộp","🫙","Pooled OLS ignores bank-specific effects."],["instrument","biến công cụ","🎻","A good instrument is relevant and exogenous."],["exogenous","ngoại sinh","➡️","Macro variables are often treated as exogenous."],["reverse causality","nhân quả ngược","🔃","Reverse causality may bias the results."],["serial correlation","tự tương quan chuỗi","🔗","Test for serial correlation in panels."],["system GMM","GMM hệ thống","⚙️","We estimate the model with system GMM."],["Sargan test","kiểm định Sargan","🧪","The Sargan test checks instrument validity."],["sub-sample","mẫu con","🧩","The results hold in each sub-sample."],["sensitivity analysis","phân tích độ nhạy","🎛️","A sensitivity analysis confirms the results."]],
+[["title","tiêu đề","🏷️","The title should be short and clear."],["research aim","mục đích nghiên cứu","🎯","State the research aim in the introduction."],["hypothesis development","phát triển giả thuyết","🌱","Hypothesis development follows the literature review."],["methods section","phần phương pháp","🛠️","The methods section describes the sample."],["table","bảng","📋","Table 3 shows the regression results."],["figure","hình","🖼️","Figure 1 presents the model."],["word limit","giới hạn số từ","🔢","Check the journal's word limit."],["author guidelines","hướng dẫn cho tác giả","📘","Follow the author guidelines strictly."],["cover letter","thư gửi ban biên tập","✉️","Write a short cover letter to the editor."],["acknowledgements","lời cảm ơn","🙏","Thank your supervisors in the acknowledgements."],["appendix","phụ lục","📎","The questionnaire is in the appendix."],["proofread","đọc soát lỗi","🧐","Proofread the paper before submission."]],
+[["editor","biên tập viên","🧑‍💼","The editor sent the paper for review."],["desk reject","bị từ chối ngay vòng biên tập","🚫","The paper was a desk reject."],["major revision","sửa chữa lớn","🔧","We received a major revision."],["minor revision","sửa chữa nhỏ","🪛","Only a minor revision is needed."],["response letter","thư phản hồi phản biện","📨","Answer each point in the response letter."],["comment","nhận xét","💬","Reviewer 2 made three comments."],["proceedings","kỷ yếu hội thảo","📘","The paper appears in the conference proceedings."],["keynote","bài phát biểu chính","🎙️","The keynote was about digital finance."],["slide","trang trình chiếu","🖥️","Keep each slide simple."],["networking","kết nối học thuật","🕸️","Conferences are good for networking."],["co-author","đồng tác giả","👥","My co-author handled the data."],["I look forward to hearing from you","mong sớm nhận phản hồi","📬","End the email with: I look forward to hearing from you."]]
+];
+
+const MODS=[M1,M2,M3];
+[X1,X2,X3].forEach((X,mi)=>MODS[mi].weeks.forEach((w,i)=>{w.v=X[i]||[]}));
+const SK=[["L","Nghe"],["S","Nói"],["R","Đọc"],["W","Viết"]];
+const BANDS=[[85,"Thành thạo","--good"],[70,"Vững","--m1"],[50,"Cơ bản","--mid"],[0,"Đang làm quen","--bad"]];
+const band=s=>BANDS.find(b=>s>=b[0]);
+
+/* ---------- State ---------- */
+const KEY="ta3lt-v1";
+let S={known:{},sc:{},ck:{},ext:{},start:{},days:[],rate:0.85,theme:"light"};
+try{const r=localStorage.getItem(KEY);if(r)S=Object.assign(S,JSON.parse(r))}catch(e){}
+document.documentElement.dataset.theme=S.theme||"light";
+let remote=null,saving=Promise.resolve();
+const today=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
+function touch(){const t=today();if(!S.days.includes(t)){S.days.push(t);if(S.days.length>500)S.days=S.days.slice(-500)}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}
+  if(remote){const c=JSON.parse(JSON.stringify(S));saving=saving.then(()=>remote.set(c)).catch(()=>{})}}
+let sampleFn=null;
+(async()=>{
+  if(!window.claude||!window.claude.use) return;
+  try{sampleFn=await claude.use("sample")}catch(e){}
+  try{
+    const [db,user]=await Promise.all([claude.use("db"),claude.use("user")]);
+    if(db&&user){const uid=await user.id();if(uid){const ref=db.doc("data/users/"+uid+"/progress");const snap=await ref.get();
+      if(snap.exists){S=Object.assign(S,snap.data());try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+      remote=ref;if(!snap.exists)save();syncNote="Tiến độ đồng bộ theo tài khoản Claude của anh.";}}
+  }catch(e){}
+  syncReady=true;
+  if(!running)route();else if(view.m)refreshChrome();
+})();
+let syncReady=false,running=false,view={};
+let syncNote="Tiến độ lưu trên trình duyệt này. Dùng Xuất/Nhập để chuyển sang máy khác.";
+
+/* ---------- Helpers ---------- */
+const $=s=>document.querySelector(s);
+const $$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const rx=s=>s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+const wre=(w,g)=>new RegExp("(^|[^A-Za-z])("+rx(w)+")(?=[^A-Za-z]|$)","i"+(g?"g":""));
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const pick=(a,n)=>shuffle(a).slice(0,n);
+const clean=s=>s.replace(/[“”]/g,"").trim();
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.remove("hidden");clearTimeout(t._h);t._h=setTimeout(()=>t.classList.add("hidden"),3400)}
+function sentences(p){const out=[];let st=0;for(let i=0;i<p.length;i++){if(".!?".includes(p[i])){let j=i+1;if(p[j]==="”")j++;
+  if(j>=p.length||(p[j]===" "&&/[A-Z“0-9]/.test(p[j+1]||""))){out.push(p.slice(st,j).trim());st=j;i=j-1}}}
+  if(p.slice(st).trim())out.push(p.slice(st).trim());return out.filter(s=>s.length>2)}
+const wc=s=>clean(s).split(/\s+/).length;
+function sentenceFor(week,w){return sentences(week.p).find(s=>wre(w).test(s))||""}
+function markUp(text,words){
+  const marks=[];words.slice().sort((a,b)=>b.length-a.length).forEach(w=>{const r=wre(w,true);let m;
+    while((m=r.exec(text))){const s=m.index+m[1].length,e=s+m[2].length;if(!marks.some(k=>s<k[1]&&e>k[0]))marks.push([s,e,w]);if(r.lastIndex===m.index)r.lastIndex++}});
+  marks.sort((a,b)=>a[0]-b[0]);let out="",p=0;
+  marks.forEach(([s,e,w])=>{out+=esc(text.slice(p,s))+`<mark data-w="${esc(w)}">${esc(text.slice(s,e))}</mark>`;p=e});
+  return out+esc(text.slice(p));
+}
+const I={
+ play:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>',
+ slow:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg>',
+ mic:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>'};
+
+/* ---------- Speech ---------- */
+let voice=null;
+function pickVoice(){if(!("speechSynthesis" in window))return;const vs=speechSynthesis.getVoices();
+  voice=vs.find(v=>v.lang==="en-US"&&/natural|google|samantha|aria|jenny|ava/i.test(v.name))||vs.find(v=>v.lang==="en-US")||vs.find(v=>/^en/i.test(v.lang))||null}
+if("speechSynthesis" in window){pickVoice();speechSynthesis.onvoiceschanged=pickVoice}
+function speak(t,end,rate){if(!("speechSynthesis" in window)){toast("Trình duyệt chưa hỗ trợ đọc thành tiếng.");return}
+  speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(clean(t));u.lang="en-US";if(voice)u.voice=voice;u.rate=rate||S.rate;if(end)u.onend=end;speechSynthesis.speak(u)}
+const stopSpeak=()=>{if("speechSynthesis" in window)speechSynthesis.cancel()};
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+let rec=null;
+function listen(btn,onText,onFail){
+  if(!SR){onFail("nosr");return}
+  if(rec){try{rec.abort()}catch(e){}rec=null}
+  let r;try{r=new SR()}catch(e){onFail("nosr");return}
+  r.lang="en-US";r.interimResults=false;r.maxAlternatives=1;
+  r.onresult=e=>onText(e.results[0][0].transcript);
+  r.onerror=e=>onFail(e.error==="not-allowed"||e.error==="service-not-allowed"?"nosr":"Chưa nghe rõ, anh thử lại.");
+  r.onend=()=>{btn&&btn.classList.remove("rec");rec=null};
+  try{r.start();rec=r;btn&&btn.classList.add("rec")}catch(e){onFail("nosr")}
+}
+const norm=s=>s.toLowerCase().replace(/[’']/g,"'").replace(/[^a-z0-9'%. ]+/g," ").replace(/\.(?!\d)/g," ").split(/\s+/).filter(Boolean);
+function sim(a,b){const x=norm(a),y=norm(b);if(!x.length||!y.length)return 0;const d=Array(y.length+1).fill(0);
+  for(let i=1;i<=x.length;i++){let p=0;for(let j=1;j<=y.length;j++){const t=d[j];d[j]=x[i-1]===y[j-1]?p+1:Math.max(d[j],d[j-1]);p=t}}
+  return Math.round(d[y.length]/Math.max(x.length,y.length)*100)}
+
+/* ---------- Scores ---------- */
+const wk=(m,n)=>m.id+"-"+n;
+const scOf=(m,n)=>S.sc[wk(m,n)]||{};
+function setSc(m,n,k,v){const key=wk(m,n);const o=S.sc[key]||(S.sc[key]={});o[k]=Math.max(o[k]||0,Math.round(v));touch();save();if(view.m===m&&view.n===n)refreshChrome()}
+function weekAvg(m,n){const o=scOf(m,n);const v=SK.map(s=>o[s[0]]||0);return Math.round(v.reduce((a,b)=>a+b,0)/4)}
+const weekPass=(m,n)=>{const o=scOf(m,n);return SK.every(s=>o[s[0]]!=null)&&weekAvg(m,n)>=70};
+const weekStarted=(m,n)=>Object.keys(scOf(m,n)).length>0||(S.known[wk(m,n)]||[]).length>0;
+function modSkill(m){const r={};SK.forEach(([k])=>{const v=m.weeks.map((_,i)=>scOf(m,i+1)[k]).filter(x=>x!=null);r[k]=v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):0});return r}
+const ckPass=(m,mo)=>(S.ck[m.id+"-"+mo]||0)>=70;
+function levelOf(m){let l=null;m.months.forEach((mo,i)=>{if(ckPass(m,i+1))l=mo.lv});return l}
+function nowWeek(m){const s=S.start[m.id];if(!s)return 0;const d=Math.floor((new Date(today())-new Date(s))/864e5);return d<0?0:Math.min(12,Math.floor(d/7)+1)}
+const colorOf=v=>v==null?"var(--sunk)":`var(${band(v)[2]})`;
+
+
+const E3=window.E3D||{};
+function applyTheme(){document.documentElement.setAttribute("data-theme",S.theme||"light")}
+applyTheme();
+function em(e,px,cls){const s=E3[e];return s?`<img class="e3d ${cls||""}" src="${s}" alt="" width="${px}" height="${px}" decoding="async" draggable="false">`:`<span class="e3t ${cls||""}" style="font-size:${Math.round(px*.78)}px">${e||""}</span>`}
+function emSvg(e,x,y,px){const s=E3[e];return s?`<image href="${s}" x="${x-px/2}" y="${y-px/2}" width="${px}" height="${px}"/>`:`<text x="${x}" y="${y+px*.32}" text-anchor="middle" font-size="${px*.8}">${e}</text>`}
+/* ---------- Words ---------- */
+const balanced=s=>(s.match(/“/g)||[]).length===(s.match(/”/g)||[]).length;
+function words(w){if(w._all)return w._all;
+  const core=w.w.map(x=>({en:x[0],vi:x[1],em:x[2],ex:clean(sentenceFor(w,x[0])),core:true}));
+  const ext=w.v.map(x=>({en:x[0],vi:x[1],em:x[2],ex:x[3],core:false}));
+  return w._all=core.concat(ext)}
+function aiWords(m,n){return (S.ext[wk(m,n)]||[]).filter(x=>x&&x.en).map(x=>({en:x.en,vi:x.vi,em:x.emoji||"➕",ex:x.example||"",core:false,ai:true}))}
+const isKnown=(m,n,en)=>(S.known[wk(m,n)]||[]).includes(en);
+function sentPool(w){const a=sentences(w.p).filter(balanced).map(clean);return a.concat(w.v.map(x=>x[3]))}
+const byLen=(arr,a,b)=>arr.filter(s=>wc(s)>=a&&wc(s)<=b);
+function mkOpts(ans,pool,f){const seen=new Set([ans[f].toLowerCase()]),out=[ans[f]];
+  for(const o of shuffle(pool)){const t=o[f];if(!seen.has(t.toLowerCase())){seen.add(t.toLowerCase());out.push(t)}if(out.length===4)break}
+  return shuffle(out)}
+const qMeaning=(x,pool,audio)=>({type:"mcq",prompt:audio?"Nghe và chọn nghĩa đúng.":`Nghĩa của <span class="en">“${esc(x.en)}”</span> là gì?`,say:x.en,auto:!!audio,ans:x.vi,opts:mkOpts(x,pool,"vi"),word:x});
+const qWord=(x,pool)=>({type:"mcq",en:true,prompt:`${em(x.em,72)}<br>Chọn từ tiếng Anh cho: <b>${esc(x.vi)}</b>`,ans:x.en,opts:mkOpts(x,pool,"en"),word:x});
+function qCloze(x,pool){const s=x.ex;if(!s||!wre(x.en).test(s))return null;
+  return {type:"mcq",en:true,prompt:`Chọn từ điền vào chỗ trống:<br><span class="en">${esc(s.replace(wre(x.en),(a,b)=>b+"_____"))}</span>`,ans:x.en,opts:mkOpts(x,pool,"en"),say:s,word:x}}
+const ring=(p,inner,cls)=>`<div class="ring ${cls||""}" style="--p:${p||0}"><span>${inner}</span></div>`;
+const ring4=o=>{const c=k=>o[k]==null?"var(--sunk)":`var(${band(o[k])[2]})`;
+  return `conic-gradient(from -45deg,${c("L")} 0 84deg,transparent 84deg 90deg,${c("R")} 90deg 174deg,transparent 174deg 180deg,${c("S")} 180deg 264deg,transparent 264deg 270deg,${c("W")} 270deg 354deg,transparent 354deg)`};
+
+/* ---------- Router ---------- */
+window.addEventListener("hashchange",route);
+function go(h){if(location.hash!==h)location.hash=h;else route()}
+function route(){
+  stopSpeak();if(rec){try{rec.abort()}catch(e){}}if(aiAbort)aiAbort.abort();running=false;view={};
+  const p=location.hash.replace(/^#\/?/,"").split("/").filter(Boolean);
+  const m=MODS.find(x=>x.id===p[0]);
+  if(!m){renderHome();return}
+  document.documentElement.style.setProperty("--c",`var(${m.color})`);
+  if(p[1]==="ck"){renderCheckpoint(m,Math.min(3,Math.max(1,+p[2]||1)));return}
+  if(p[1]==="vocab"){renderBook(m);return}
+  const n=+p[1];if(n>=1&&n<=12){renderWeek(m,n,["map","L","R","S","W"].includes(p[2])?p[2]:"map");return}
+  renderModule(m);
+}
+function mount(html){$("#app").innerHTML=html;window.scrollTo(0,0);bindGo($("#app"))}
+function bindGo(root){root.querySelectorAll("[data-go]").forEach(b=>b.onclick=e=>{e.preventDefault();go(b.dataset.go)})}
+
+/* ---------- Home ---------- */
+function renderHome(){
+  document.documentElement.style.setProperty("--c","var(--m1)");
+  const kn=Object.values(S.known).reduce((a,b)=>a+b.length,0);
+  const passed=MODS.reduce((a,m)=>a+m.weeks.filter((_,i)=>weekPass(m,i+1)).length,0);
+  mount(`<section class="hero2"><div class="hero-txt"><h1>Tiếng Anh ba lộ trình</h1>
+   <p>720 từ và cụm từ qua 36 chủ đề có hình ảnh. Mỗi tuần luyện đủ nghe, đọc, nói, viết; cuối mỗi tháng có bài kiểm tra mốc.</p>
+   <div class="totals"><div class="tot">${em("🏆",40)}<div><b>${passed}/36</b><span>tuần đạt chuẩn</span></div></div><div class="tot">${em("📚",40)}<div><b>${kn}/720</b><span>từ đã thuộc</span></div></div><div class="tot">${em("🔥",40)}<div><b>${S.days.length}</b><span>ngày luyện tập</span></div></div></div></div>
+   <div class="hero-art" aria-hidden="true">${MODS.map((m,i)=>`<span class="fl${i}">${em(m.icon,104)}</span>`).join("")}</div></section>
+   <div class="modules">${MODS.map(m=>{const pass=m.weeks.filter((_,i)=>weekPass(m,i+1)).length;const nw=nowWeek(m);
+     const mk=m.weeks.reduce((a,_,i)=>a+(S.known[wk(m,i+1)]||[]).length,0);
+     return `<div class="mcard" style="--c:var(${m.color})">
+       <div class="band-top"><div class="big-em">${em(m.icon,72)}</div><div style="flex:1"><h2>${esc(m.name)}</h2><div class="small muted en">${esc(m.en)}</div></div>${ring(Math.round(pass/12*100),pass+"/12","")}</div>
+       <div class="strip" aria-hidden="true">${m.weeks.map((w,i)=>`<span class="${weekPass(m,i+1)?"on":weekStarted(m,i+1)?"part":""}">${em(w.i,30)}</span>`).join("")}</div>
+       <div><div class="small muted" style="margin-bottom:4px">Thang mốc: ${m.months.map(x=>esc(x.lv)).join(", ")}</div>
+       <div class="ladder">${m.months.map((x,k)=>`<i class="${ckPass(m,k+1)?"on":""}" style="height:${40+k*30}%">${esc(x.lv)}</i>`).join("")}</div></div>
+       <div class="small muted">Đã thuộc ${mk}/240 từ${nw?`. Theo lịch: tuần ${nw}`:""}</div>
+       <div class="quick"><button class="btn primary sm" data-go="#/${m.id}">Mở lộ trình</button><button class="btn sm" data-go="#/${m.id}/vocab">Sổ từ vựng</button>${nw?`<button class="btn sm" data-go="#/${m.id}/${nw}">Học tuần ${nw}</button>`:""}</div></div>`}).join("")}</div>
+   <div class="settings">
+     <div class="box"><h3 style="font-size:1rem;margin-bottom:8px">Giọng đọc</h3>
+       <label class="row small">Tốc độ <input type="range" id="rate" min="0.6" max="1.1" step="0.05" value="${S.rate}" style="flex:1"> <span id="rv">${S.rate}</span></label>
+       <div class="row" style="margin-top:10px"><span class="small">Giao diện</span><button class="fchip" data-th="light" aria-pressed="${(S.theme||"light")==="light"}">☀️ Sáng</button><button class="fchip" data-th="dark" aria-pressed="${S.theme==="dark"}">🌙 Tối</button></div>
+       <div class="row" style="margin-top:8px"><button class="btn sm" id="testv">Nghe thử</button><span class="small muted">${SR?"Micro: có hỗ trợ nhận giọng nói.":"Micro: chưa hỗ trợ ở đây, phần Nói dùng tự đánh giá."}</span></div></div>
+     <div class="box"><h3 style="font-size:1rem;margin-bottom:8px">Tiến độ</h3>
+       <p class="small muted" style="margin:0 0 10px">${syncNote}</p>
+       <div class="row"><button class="btn sm" id="thm">${(S.theme||"light")==="light"?"🌙 Giao diện tối":"☀️ Giao diện sáng"}</button><button class="btn sm" id="exp">Xuất tiến độ</button><label class="btn sm" style="display:inline-flex;align-items:center">Nhập tiến độ<input type="file" id="imp" accept="application/json,.json" class="hidden"></label></div></div>
+   </div>`);
+  $("#rate").oninput=e=>{S.rate=+e.target.value;$("#rv").textContent=S.rate};$("#rate").onchange=save;
+  $("#testv").onclick=()=>speak("Good morning. Let's practice English together.");
+  $("#thm").onclick=()=>{S.theme=(S.theme||"light")==="light"?"dark":"light";applyTheme();save();renderHome()};
+  $("#exp").onclick=exportData;$("#imp").onchange=importData;
+  $$("[data-th]").forEach(b=>b.onclick=()=>{S.theme=b.dataset.th;document.documentElement.dataset.theme=S.theme;save();renderHome()});
+}
+async function exportData(){
+  const data=JSON.stringify(S,null,1),name="tien-do-tieng-anh-"+today()+".json";
+  try{if(window.claude&&claude.use){const d=await claude.use("downloads");if(d){await d.save({filename:name,data});return}}}catch(e){if(e&&e.code)return}
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([data],{type:"application/json"}));a.download=name;document.body.appendChild(a);a.click();a.remove();
+}
+function importData(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();
+  r.onload=()=>{try{const o=JSON.parse(r.result);if(!o||typeof o!=="object"||!o.sc)throw 0;
+    ["known","sc","ck","ext","start"].forEach(k=>{if(o[k]&&typeof o[k]==="object")S[k]=Object.assign({},S[k],o[k])});
+    if(Array.isArray(o.days))S.days=[...new Set(S.days.concat(o.days))].sort();save();toast("Đã nhập tiến độ.");renderHome()}
+  catch(x){toast("Tệp không đúng định dạng tiến độ.")}};r.readAsText(f)}
+
+/* ---------- Module ---------- */
+function radar(vals){
+  const cx=150,cy=135,R=95,ax=[[0,-1],[1,0],[0,1],[-1,0]];
+  const pt=(k,v)=>[cx+ax[k][0]*R*v/100,cy+ax[k][1]*R*v/100];
+  const rings=[25,50,70,85,100].map(v=>`<polygon points="${ax.map((_,k)=>pt(k,v).join(",")).join(" ")}" fill="none" stroke="var(--line)" stroke-width="${v===70?1.6:1}" ${v===70?'stroke-dasharray="4 3"':""}/>`).join("");
+  const keys=["L","S","R","W"],names={L:"Nghe",S:"Nói",R:"Đọc",W:"Viết"};
+  const pts=keys.map((k,i)=>pt(i,Math.max(vals[k]||0,2)));
+  const lab=keys.map((k,i)=>{const [x,y]=pt(i,124);return `<text x="${x}" y="${y+4}" text-anchor="middle" font-weight="700">${names[k]} ${vals[k]||0}</text>`}).join("");
+  return `<svg class="radar" viewBox="0 0 300 270" role="img" aria-label="Biểu đồ bốn kỹ năng">${rings}${ax.map((_,k)=>{const [x,y]=pt(k,100);return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="var(--line)"/>`}).join("")}
+   <polygon points="${pts.map(p=>p.join(",")).join(" ")}" fill="color-mix(in srgb,var(--c) 30%,transparent)" stroke="var(--c)" stroke-width="2.5" stroke-linejoin="round"/>
+   ${pts.map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="4.5" fill="var(--c)"/>`).join("")}${lab}</svg>`;
+}
+function renderModule(m){
+  const nw=nowWeek(m),sk=modSkill(m),lv=levelOf(m);
+  const pass=m.weeks.filter((_,i)=>weekPass(m,i+1)).length;
+  const mk=m.weeks.reduce((a,_,i)=>a+(S.known[wk(m,i+1)]||[]).length,0);
+  mount(`<button class="back" data-go="#/">‹ Ba lộ trình</button>
+   <div class="wband"><div class="em">${em(m.icon,76)}</div><div class="info"><h1>${esc(m.name)}</h1><div class="small muted">Mốc hiện tại: <b style="color:var(--c)">${lv?esc(lv):"chưa đạt mốc tháng nào"}</b>. Đã thuộc ${mk}/240 từ.</div>
+     <div class="quick" style="margin-top:8px"><button class="btn primary sm" data-go="#/${m.id}/${nw||Math.min(12,pass+1)}">${nw?`Học tuần ${nw} theo lịch`:`Học tiếp tuần ${Math.min(12,pass+1)}`}</button><button class="btn sm" data-go="#/${m.id}/vocab">Sổ từ vựng</button></div></div>
+     ${ring(Math.round(pass/12*100),pass+"/12","big")}</div>
+   <div class="mgrid"><div class="path" aria-label="Lộ trình 12 tuần">
+   ${m.months.map((mo,k)=>{const best=S.ck[m.id+"-"+(k+1)];
+     return `<div class="mpill">Tháng ${k+1}: ${esc(mo.name)}<small>Mục tiêu ${esc(mo.lv)}</small></div>`+
+     [0,1,2,3].map(j=>{const n=k*4+j+1,w=m.weeks[n-1],o=scOf(m,n);
+       return `<button class="stn ${n%2?"L":"R"} ${weekPass(m,n)?"pass":""} ${nw===n?"now":""}" data-go="#/${m.id}/${n}" aria-label="Tuần ${n}: ${esc(w.t)}">
+        <div class="bub" style="background:${ring4(o)}"><span>${em(w.i,42)}</span></div>
+        <div class="crd"><div class="n">Tuần ${n}${nw===n?", tuần này":""}</div><div class="tt">${esc(w.t)}</div>
+        <div class="ss">${SK.map(([s,nm])=>`${nm} ${o[s]??"–"}`).join("  ")}</div></div></button>`}).join("")+
+     `<div class="flag ${ckPass(m,k+1)?"ok":""}"><div class="fl">${em("🏁",34)}</div><div class="small"><b>Kiểm tra mốc tháng ${k+1}</b>${best!=null?`, cao nhất ${best}%`:""}</div>
+      <button class="btn sm ${ckPass(m,k+1)?"":"primary"}" data-go="#/${m.id}/ck/${k+1}">${ckPass(m,k+1)?"Đã đạt, làm lại":"Làm bài kiểm tra"}</button></div>`}).join("")}
+   </div><div>
+   <div class="box"><h3 style="font-size:1rem">Hồ sơ bốn kỹ năng</h3><p class="small muted" style="margin:4px 0 0">Trung bình các tuần đã làm; nét đứt là ngưỡng 70.</p>${radar(sk)}
+     <p class="small muted" style="margin:0">Vòng quanh biểu tượng mỗi tuần chia 4 phần: trên phải Nghe, dưới phải Đọc, dưới trái Nói, trên trái Viết; màu theo thang điểm.</p></div>
+   <div class="box sec scale"><h3 style="font-size:1rem;margin-bottom:6px">Thang đo lộ trình</h3>
+     <table><tr><th>Điểm</th><th>Mức</th></tr>
+     <tr><td><span class="chip" style="background:var(--good)">85–100</span></td><td>Thành thạo: dùng ngay được trong công việc</td></tr>
+     <tr><td><span class="chip" style="background:var(--m1)">70–84</span></td><td>Vững: đạt chuẩn tuần</td></tr>
+     <tr><td><span class="chip" style="background:var(--mid)">50–69</span></td><td>Cơ bản: cần ôn lại</td></tr>
+     <tr><td><span class="chip" style="background:var(--bad)">0–49</span></td><td>Đang làm quen</td></tr></table>
+     <p class="small muted" style="margin:10px 0 0">Đạt tuần: làm đủ 4 kỹ năng, trung bình từ 70. Đạt mốc tháng: bài kiểm tra mốc từ 70%. Mức CEFR là mục tiêu tham chiếu để định độ khó, không thay cho chứng chỉ.</p></div>
+   <div class="box sec"><h3 style="font-size:1rem;margin-bottom:8px">Lịch tuần gợi ý (20–25 phút/buổi)</h3>
+     <div class="week7">${[["T2","🗺️","Từ"],["T3","🎧","Nghe"],["T4","📖","Đọc"],["T5","🗣️","Nói"],["T6","✍️","Viết"],["T7","🔁","Ôn"],["CN","☕","Nghỉ"]].map(d=>`<div>${d[0]}<b>${em(d[1],28)}</b>${d[2]}</div>`).join("")}</div>
+     <label class="small row" style="margin-top:12px">Ngày bắt đầu <input type="date" class="inp" id="start" value="${S.start[m.id]||""}" style="width:auto"></label>
+     <p class="small muted" style="margin:6px 0 0">${nw?`Theo lịch, anh đang ở tuần ${nw} (vòng viền đậm trên lộ trình).`:"Chọn ngày bắt đầu để lộ trình đánh dấu tuần cần học."}</p></div>
+   </div></div>`);
+  $("#start").onchange=e=>{S.start[m.id]=e.target.value;save();renderModule(m)};
+}
+
+/* ---------- Vocabulary book ---------- */
+let bookF="all",bookQ="";
+function renderBook(m){
+  mount(`<button class="back" data-go="#/${m.id}">‹ ${esc(m.name)}</button>
+   <div class="wband"><div class="em">${em("📒",76)}</div><div class="info"><h1>Sổ từ vựng</h1><div class="small muted">${esc(m.name)}: 240 từ trong 12 chủ đề, cộng các từ AI gợi ý thêm.</div></div><div id="bstat"></div></div>
+   <div class="row" style="margin-bottom:10px"><input class="inp" id="bq" placeholder="Tìm tiếng Anh hoặc tiếng Việt" value="${esc(bookQ)}" style="flex:1;min-width:200px"><button class="btn primary" id="brev">Ôn nhanh 15 từ</button></div>
+   <div class="filters">${[["all","Tất cả"],["un","Chưa thuộc"],["kn","Đã thuộc"],["core","Cốt lõi"],["ext","Mở rộng"]].map(([k,t])=>`<button class="fchip" aria-pressed="${bookF===k}" data-f="${k}">${t}</button>`).join("")}</div>
+   <p class="small muted" style="margin:0 0 10px">Chạm thẻ để nghe và xem câu ví dụ; chạm ô vuông góc phải để đánh dấu đã thuộc.</p>
+   <div id="blist" class="vbook"></div>`);
+  const draw=()=>{const q=bookQ.trim().toLowerCase();let tot=0,kn=0;
+    $("#blist").innerHTML=m.weeks.map((w,i)=>{const n=i+1;const all=words(w).concat(aiWords(m,n));
+      all.forEach(x=>{tot++;if(isKnown(m,n,x.en))kn++});
+      const list=all.filter(x=>{const k=isKnown(m,n,x.en);if(bookF==="un"&&k)return false;if(bookF==="kn"&&!k)return false;if(bookF==="core"&&!x.core)return false;if(bookF==="ext"&&x.core)return false;
+        return !q||x.en.toLowerCase().includes(q)||x.vi.toLowerCase().includes(q)});
+      if(!list.length)return "";
+      return `<div class="wk"><h3>${em(w.i,34)} Tuần ${n}: ${esc(w.t)} <button class="btn sm" data-go="#/${m.id}/${n}" style="margin-left:auto">Mở tuần</button></h3>
+       <div class="vgrid">${list.map(x=>`<div class="vt ${isKnown(m,n,x.en)?"known":""}" data-n="${n}" data-en="${esc(x.en)}" role="button" tabindex="0"><span class="tag">${x.core?"cốt lõi":x.ai?"AI":"mở rộng"}</span><button class="ck" data-t="1" aria-label="Đánh dấu đã thuộc">${isKnown(m,n,x.en)?"✅":"⬜"}</button><span class="e">${em(x.em,58)}</span><span class="w en">${esc(x.en)}</span><span class="v">${esc(x.vi)}</span></div>`).join("")}</div></div>`}).join("")||'<p class="muted">Không có từ nào khớp bộ lọc.</p>';
+    $("#bstat").innerHTML=ring(Math.round(kn/Math.max(1,tot)*100),kn,"big");
+    bindGo($("#blist"));
+    $$("#blist .vt").forEach(t=>{const f=()=>{const n=+t.dataset.n,x=words(m.weeks[n-1]).concat(aiWords(m,n)).find(y=>y.en===t.dataset.en);speak(x.en);toast(`${x.en}: ${x.vi}${x.ex?". "+clean(x.ex):""}`)};
+      t.onclick=f;t.onkeydown=e=>{if(e.key==="Enter")f()};
+      t.querySelector("[data-t]").onclick=e=>{e.stopPropagation();const n=+t.dataset.n;knownToggle(m,n,t.dataset.en,!isKnown(m,n,t.dataset.en));draw()}});
+  };
+  draw();
+  $("#bq").oninput=e=>{bookQ=e.target.value;draw()};
+  $$(".fchip").forEach(b=>b.onclick=()=>{bookF=b.dataset.f;$$(".fchip").forEach(x=>x.setAttribute("aria-pressed",x===b));draw()});
+  $("#brev").onclick=()=>{
+    const all=m.weeks.flatMap((w,i)=>words(w).map(x=>({x,n:i+1})));const un=all.filter(o=>!isKnown(m,o.n,o.x.en));
+    const sel=pick(un.length>=15?un:all,15);const pool=all.map(o=>o.x);
+    const items=sel.map((o,i)=>Object.assign(i%2?qWord(o.x,pool):qMeaning(o.x,pool,true),{n:o.n}));
+    $("#blist").innerHTML='<div id="run"></div>';
+    runner($("#run"),items,"Ôn nhanh",sc=>{doneScreen($("#run"),sc,"Từ trả lời đúng đã được đánh dấu là đã thuộc.",()=>renderBook(m),null)},
+      (it,ok)=>{if(ok)knownToggle(m,it.n,it.word.en,true)});
+  };
+}
+
+/* ---------- Week ---------- */
+const TABS=[["map","🗺️","Từ vựng",null],["L","🎧","Nghe","L"],["R","📖","Đọc","R"],["S","🗣️","Nói","S"],["W","✍️","Viết","W"]];
+function refreshChrome(){const {m,n,tab}=view;if(!m||!$("#chrome"))return;const w=m.weeks[n-1],o=scOf(m,n),month=Math.ceil(n/4);
+  const kn=words(w).filter(x=>isKnown(m,n,x.en)).length;
+  $("#chrome").innerHTML=`<div class="wband"><div class="em">${em(w.i,76)}</div><div class="info"><div class="small muted">Tuần ${n}, tháng ${month}, mục tiêu ${esc(m.months[month-1].lv)}. Đã thuộc ${kn}/20 từ.</div><h1>${esc(w.t)}</h1><div class="en muted">${esc(w.e)}</div></div>
+   <div class="skills">${TABS.slice(1).map(([id,ic,nm,k])=>`<button class="skl" data-go="#/${m.id}/${n}/${id}" aria-label="${nm}: ${o[k]??"chưa làm"}"><div class="ring" style="--p:${o[k]||0};background:conic-gradient(${o[k]==null?"var(--sunk)":`var(${band(o[k])[2]})`} calc(var(--p)*1%),var(--sunk) 0)"><span>${o[k]??em(ic,26,"inl")}</span></div>${nm}</button>`).join("")}</div></div>
+   <div class="tabs" role="tablist">${TABS.map(([id,ic,nm])=>`<button class="tab" role="tab" aria-selected="${id===tab}" data-go="#/${m.id}/${n}/${id}"><span class="ti">${em(ic,22)}</span>${nm}</button>`).join("")}</div>`;
+  bindGo($("#chrome"))}
+function renderWeek(m,n,tab){
+  view={m,n,tab};
+  mount(`<button class="back" data-go="#/${m.id}">‹ ${esc(m.name)}</button>
+   <div id="chrome"></div>
+   <div class="wgrid ${tab==="map"?"show-map":""}"><aside><div class="box map" id="map" style="margin-top:16px"></div></aside>
+   <div><div class="panel" id="panel"></div>
+   <div class="row" style="justify-content:space-between;margin-top:22px">${n>1?`<button class="btn sm" data-go="#/${m.id}/${n-1}">‹ Tuần ${n-1}</button>`:"<span></span>"}${n<12?`<button class="btn sm" data-go="#/${m.id}/${n+1}">Tuần ${n+1} ›</button>`:`<button class="btn sm" data-go="#/${m.id}/ck/3">Kiểm tra mốc tháng 3 ›</button>`}</div></div></div>`);
+  refreshChrome();drawMap(m,n);
+  ({map:tabMap,L:tabListen,R:tabRead,S:tabSpeak,W:tabWrite})[tab](m,n);
+}
+function wrapLabel(s,max){const ws=s.split(" ");const lines=[""];ws.forEach(x=>{const l=lines[lines.length-1];if((l+" "+x).trim().length>max&&l)lines.push(x);else lines[lines.length-1]=(l+" "+x).trim()});return lines.slice(0,3)}
+function drawMap(m,n){
+  const w=m.weeks[n-1];const cx=200,cy=205,R=142;
+  const pos=w.w.map((x,i)=>{const a=-Math.PI/2+i*Math.PI/4;return [cx+R*Math.cos(a),cy+R*Math.sin(a)]});
+  const title=wrapLabel(w.e,16);
+  $("#map").innerHTML=`<svg viewBox="0 0 400 428" role="img" aria-label="Bản đồ từ cốt lõi: ${esc(w.e)}"><defs><filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1b3a6b" flood-opacity=".16"/></filter><radialGradient id="cg" cx="35%" cy="30%"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+   ${pos.map(([X,Y])=>`<line x1="${cx}" y1="${cy}" x2="${X}" y2="${Y}" stroke="var(--c)" stroke-opacity=".35" stroke-width="2"/>`).join("")}
+   <circle cx="${cx}" cy="${cy}" r="66" fill="var(--c)" filter="url(#sh)"/><circle cx="${cx}" cy="${cy}" r="66" fill="url(#cg)"/>
+   ${emSvg(w.i,cx,cy-20,46)}
+   ${title.map((l,j)=>`<text x="${cx}" y="${cy+20+j*15}" text-anchor="middle" font-size="12.5" font-weight="700" style="fill:#fff">${esc(l)}</text>`).join("")}
+   ${w.w.map((x,i)=>{const [X,Y]=pos[i];const k=isKnown(m,n,x[0]);const lab=wrapLabel(x[0],15);
+     return `<g class="node" tabindex="0" role="button" aria-label="${esc(x[0])}" data-i="${i}">
+      <circle cx="${X}" cy="${Y}" r="30" fill="${k?"color-mix(in srgb,var(--c) 28%,var(--surface))":"var(--surface)"}" stroke="var(--c)" stroke-width="${k?3.5:2}" filter="url(#sh)"/>
+      ${emSvg(x[2],X,Y,36)}
+      ${lab.map((l,j)=>`<text x="${X}" y="${Y+47+j*14}" text-anchor="middle" font-size="12.5" font-weight="600">${esc(l)}</text>`).join("")}</g>`}).join("")}
+  </svg><div class="detail" id="detail"><p class="small muted" style="margin:0">Bản đồ 8 từ cốt lõi. Chạm từng nhánh để nghe và xem nghĩa; nhánh tô đậm là từ đã thuộc. 12 từ mở rộng nằm ở thẻ Từ vựng.</p></div>`;
+  $$("#map .node").forEach(g=>{const f=()=>showDetail(m,n,+g.dataset.i);g.onclick=f;g.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();f()}}});
+}
+function showDetail(m,n,i){
+  const w=m.weeks[n-1],x=words(w)[i];speak(x.en);
+  $("#detail").innerHTML=`<div class="row" style="justify-content:space-between;flex-wrap:nowrap"><div><div class="w en" style="display:flex;gap:8px;align-items:center">${em(x.em,40)} ${esc(x.en)}</div><div style="color:var(--c);font-weight:700">${esc(x.vi)}</div></div><button class="icon" id="dsay" aria-label="Nghe câu">${I.play}</button></div>
+   <div class="en small" style="margin-top:6px">${markUp(x.ex,[x.en])}</div>`;
+  $("#dsay").onclick=()=>speak(x.ex);
+}
+function knownToggle(m,n,word,val){const k=S.known[wk(m,n)]||(S.known[wk(m,n)]=[]);const has=k.includes(word);if(val&&!has)k.push(word);if(!val&&has)k.splice(k.indexOf(word),1);touch();save()}
+
+/* Vocabulary tab: flashcards + grid */
+let vMode="cards",vFilter="all",fcIdx=0;
+function tabMap(m,n){
+  const w=m.weeks[n-1];
+  const all=words(w).concat(aiWords(m,n));
+  const list=all.filter(x=>vFilter==="all"||(vFilter==="core"&&x.core)||(vFilter==="ext"&&!x.core)||(vFilter==="un"&&!isKnown(m,n,x.en)));
+  if(fcIdx>=list.length)fcIdx=0;
+  $("#panel").innerHTML=`<div class="row" style="justify-content:space-between;margin-bottom:10px">
+     <div class="filters" style="margin:0">${[["all",`Tất cả ${all.length}`],["core","Cốt lõi 8"],["ext",`Mở rộng ${all.length-8}`],["un","Chưa thuộc"]].map(([k,t])=>`<button class="fchip" aria-pressed="${vFilter===k}" data-f="${k}">${t}</button>`).join("")}</div>
+     <div class="filters" style="margin:0">${[["cards","🃏 Thẻ lật"],["grid","🔲 Lưới"]].map(([k,t])=>`<button class="fchip" aria-pressed="${vMode===k}" data-v="${k}">${t}</button>`).join("")}</div></div>
+   <div id="vbody"></div>
+   <div class="sec"><h3>Mở rộng thêm bằng AI</h3><p class="small muted" style="margin:0 0 8px">Mỗi lần gợi ý 6 từ, cụm từ mới cùng chủ đề, không trùng với từ đã có; được lưu vào tuần này và Sổ từ vựng.</p>
+   <div class="row"><button class="btn" id="more" ${sampleFn?"":"disabled"}>Gợi ý thêm 6 từ</button>${sampleFn?"":'<span class="small muted">Cần mở trang trong Claude để dùng AI.</span>'}</div></div>`;
+  $$("[data-f]").forEach(b=>b.onclick=()=>{vFilter=b.dataset.f;fcIdx=0;tabMap(m,n)});
+  $$("[data-v]").forEach(b=>b.onclick=()=>{vMode=b.dataset.v;tabMap(m,n)});
+  const body=$("#vbody");
+  if(!list.length){body.innerHTML=`<div class="box done"><div class="big">${em("🎉",90)}</div><p>Anh đã thuộc hết các từ trong bộ lọc này.</p></div>`}
+  else if(vMode==="cards"){
+    const x=list[fcIdx],k=isKnown(m,n,x.en);
+    body.innerHTML=`<div class="fc" id="fc"><div class="fc-in">
+      <div class="face"><div class="e">${em(x.em,128)}</div><div class="w en">${esc(x.en)}</div><div class="small muted">${x.core?"Từ cốt lõi":x.ai?"Từ AI gợi ý":"Từ mở rộng"}${k?", đã thuộc ✓":""}</div><div class="small muted" style="margin-top:6px">Chạm để lật thẻ</div></div>
+      <div class="face back"><div class="e">${em(x.em,64)}</div><div class="v">${esc(x.vi)}</div><div class="x en">${markUp(x.ex,[x.en])}</div></div></div></div>
+     <div class="fc-nav" style="max-width:520px;margin:12px auto 0"><button class="btn sm" id="fp" ${fcIdx?"":"disabled"} aria-label="Thẻ trước">‹ Trước</button>
+      <span class="small muted">Thẻ ${fcIdx+1}/${list.length}</span><button class="btn sm" id="fn" ${fcIdx<list.length-1?"":"disabled"} aria-label="Thẻ sau">Sau ›</button></div>
+     <div class="row" style="justify-content:center;margin-top:10px"><button class="icon" id="fs" aria-label="Nghe từ">${I.play}</button><button class="btn sm" id="fx">Nghe câu</button><button class="btn sm" id="fa">Chưa nhớ</button><button class="btn primary sm" id="fk">${k?"Đã thuộc ✓":"Đã thuộc"}</button></div>`;
+    const fc=$("#fc");fc.onclick=()=>fc.classList.toggle("flip");
+    $("#fs").onclick=()=>speak(x.en);$("#fx").onclick=()=>speak(x.ex);
+    $("#fp").onclick=()=>{fcIdx--;tabMap(m,n)};$("#fn").onclick=()=>{fcIdx++;tabMap(m,n)};
+    $("#fa").onclick=()=>{knownToggle(m,n,x.en,false);if(fcIdx<list.length-1)fcIdx++;tabMap(m,n);drawMap(m,n);refreshChrome()};
+    $("#fk").onclick=()=>{knownToggle(m,n,x.en,true);if(vFilter!=="un"&&fcIdx<list.length-1)fcIdx++;tabMap(m,n);drawMap(m,n);refreshChrome()};
+    setTimeout(()=>speak(x.en),150);
+  }else{
+    body.innerHTML=`<div class="vgrid">${list.map((x,i)=>`<div class="vt ${isKnown(m,n,x.en)?"known":""}" data-i="${i}" role="button" tabindex="0"><span class="tag">${x.core?"cốt lõi":x.ai?"AI":"mở rộng"}</span><button class="ck" data-t="1" aria-label="Đánh dấu đã thuộc">${isKnown(m,n,x.en)?"✅":"⬜"}</button><span class="e">${em(x.em,58)}</span><span class="w en">${esc(x.en)}</span><span class="v">${esc(x.vi)}</span></div>`).join("")}</div>
+     <p class="small muted">Chạm thẻ để nghe và xem câu ví dụ; chạm ô vuông góc phải để đánh dấu đã thuộc.</p><div class="tip hidden" id="tip"></div>`;
+    $$("#vbody .vt").forEach(t=>{const x=list[+t.dataset.i];const f=()=>{speak(x.en);$("#tip").classList.remove("hidden");$("#tip").innerHTML=`${em(x.em,32,"inl")} <b class="en">${esc(x.en)}</b>: ${esc(x.vi)}<br><span class="en">${markUp(x.ex,[x.en])}</span>`};
+      t.onclick=f;t.onkeydown=e=>{if(e.key==="Enter")f()};t.querySelector("[data-t]").onclick=e=>{e.stopPropagation();knownToggle(m,n,x.en,!isKnown(m,n,x.en));tabMap(m,n);drawMap(m,n);refreshChrome()}});
+  }
+  $("#more").onclick=async()=>{const b=$("#more");b.disabled=true;b.textContent="Đang gợi ý...";
+    const have=all.map(x=>x.en).join(", ");
+    try{const out=await sampleFn.json(`You help a Vietnamese adult learn English for: ${m.en}. Topic of the week: "${w.e}". Target level: ${m.months[Math.ceil(n/4)-1].lv} (CEFR).
+Suggest 6 NEW, genuinely useful words or collocations for this topic that are NOT in this list: ${have}.
+Return ONLY a JSON array of 6 objects: [{"en":"word or phrase","vi":"accurate short Vietnamese meaning","emoji":"one emoji that helps remember it","example":"one natural example sentence at the target level that contains the exact word or phrase"}]`,{modelTier:"quick"});
+      const arr=(Array.isArray(out)?out:out.items||out.words||[]).filter(x=>x&&x.en&&x.vi&&!all.some(y=>y.en.toLowerCase()===String(x.en).toLowerCase())).slice(0,6);
+      S.ext[wk(m,n)]=(S.ext[wk(m,n)]||[]).concat(arr);save();vFilter="ext";vMode="grid";tabMap(m,n);toast(`Đã thêm ${arr.length} từ mới.`)}
+    catch(e){toast(e&&e.code==="not_granted"?"Anh chưa cho phép trang dùng Claude.":"Chưa lấy được gợi ý, anh thử lại sau.");b.disabled=false;b.textContent="Gợi ý thêm 6 từ"}};
+}
+
+/* ---------- Runner ---------- */
+let aiAbort=null;
+function runner(el,items,title,onDone,onItem){
+  running=true;let i=0;const scores=[];
+  const next=()=>{if(i>=items.length){running=false;onDone(Math.round(scores.reduce((a,b)=>a+b,0)/scores.length*100));return}draw()};
+  const draw=()=>{const it=items[i];
+    el.innerHTML=`<div class="prog"><i style="width:${i/items.length*100}%"></i></div><div class="item"><div class="ttl">${esc(title)}: câu ${i+1}/${items.length}</div><div id="it"></div>
+     <div class="row hidden" id="nx" style="justify-content:flex-end;margin-top:14px"><button class="btn primary" id="nxb">${i===items.length-1?"Xem kết quả":"Câu tiếp"}</button></div></div>`;
+    const fin=v=>{scores[i]=v;if(onItem)onItem(it,v>=1);$("#nx").classList.remove("hidden");$("#nxb").focus({preventScroll:true})};
+    $("#nxb").onclick=()=>{stopSpeak();i++;next()};
+    ITEM[it.type]($("#it"),it,fin);
+  };
+  next();
+}
+const ITEM={
+ mcq(el,it,fin){
+  el.innerHTML=`<div class="row" style="flex-wrap:nowrap;align-items:flex-start"><div class="prompt" style="flex:1">${it.prompt}</div>${it.say?`<button class="icon" id="q1" aria-label="Nghe">${I.play}</button>`:""}</div>
+   <div class="opts">${it.opts.map(o=>`<button class="opt ${it.en?"en":""}" data-o="${esc(o)}">${esc(o)}</button>`).join("")}</div><div class="res" id="r"></div>`;
+  if(it.say){$("#q1").onclick=()=>speak(it.say);if(it.auto)setTimeout(()=>speak(it.say),250)}
+  let done=false;$$(".opt").forEach(b=>b.onclick=()=>{if(done)return;done=true;const ok=b.dataset.o===it.ans;
+    $$(".opt").forEach(x=>{x.disabled=true;if(x.dataset.o===it.ans)x.classList.add("right")});if(!ok)b.classList.add("wrong");
+    if(it.word)$("#r").innerHTML=`${em(it.word.em,32,"inl")} <b class="en">${esc(it.word.en)}</b>: ${esc(it.word.vi)}`;
+    if(it.word&&!it.auto)speak(it.word.en);fin(ok?1:0)});
+ },
+ dict(el,it,fin){
+  el.innerHTML=`<div class="prompt">🎧 Nghe và chép lại câu.</div><div class="row" style="margin-bottom:10px"><button class="icon" id="p1" aria-label="Nghe">${I.play}</button><button class="icon" id="p2" aria-label="Nghe chậm">${I.slow}</button><span class="small muted">Nghe lại bao nhiêu lần cũng được</span></div>
+   <textarea id="d" class="en" lang="en" autocapitalize="sentences" autocomplete="off" spellcheck="false" placeholder="Gõ những gì anh nghe được"></textarea><div class="row" style="margin-top:8px"><button class="btn primary" id="chk">Kiểm tra</button></div><div class="res" id="r"></div>`;
+  $("#p1").onclick=()=>speak(it.text);$("#p2").onclick=()=>speak(it.text,null,Math.max(.55,S.rate-.25));setTimeout(()=>speak(it.text),250);
+  $("#chk").onclick=()=>{const v=$("#d").value.trim();if(!v){toast("Anh gõ câu nghe được trước đã.");return}const p=sim(v,it.text);
+    $("#r").innerHTML=`<span class="score ${p>=85?"ok":p>=60?"mid":"no"}">${p}%</span> khớp. Câu gốc: <span class="en">${esc(clean(it.text))}</span>`;$("#chk").disabled=true;$("#d").readOnly=true;fin(p/100)};
+ },
+ shadow(el,it,fin){
+  let best=-1,given=false;const give=v=>{if(!given){given=true;fin(v)}else{fin(v)}};
+  el.innerHTML=`<div class="prompt en">${esc(clean(it.text))}</div><p class="small muted" style="margin:-6px 0 10px">Nghe mẫu, bấm micro và đọc theo. Thử nhiều lần, lấy lần tốt nhất.</p>
+   <div class="row"><button class="icon" id="p1" aria-label="Nghe">${I.play}</button><button class="icon" id="p2" aria-label="Nghe chậm">${I.slow}</button><button class="icon" id="mic" aria-label="Nói">${I.mic}</button><span id="st" class="small muted"></span><button class="btn sm" id="selfb" style="margin-left:auto">Không dùng micro</button></div>
+   <div class="res" id="r"></div><div id="self" class="hidden" style="margin-top:10px"><p class="small" style="margin:0 0 8px">Thiết bị chưa cho nhận giọng nói ở đây. Anh đọc to câu trên rồi tự đánh giá trung thực:</p>
+   <div class="row"><button class="btn sm" data-v="90">Trôi chảy, rõ</button><button class="btn sm" data-v="70">Khá, còn vấp</button><button class="btn sm" data-v="45">Chưa đọc được</button></div></div>`;
+  $("#p1").onclick=()=>speak(it.text);$("#p2").onclick=()=>speak(it.text,null,Math.max(.55,S.rate-.25));
+  const selfMode=()=>{$("#self").classList.remove("hidden");$$("#self [data-v]").forEach(b=>b.onclick=()=>{$$("#self [data-v]").forEach(x=>{x.disabled=true;x.classList.toggle("primary",x===b)});give(+b.dataset.v/100)})};
+  if(!SR)selfMode();
+  $("#selfb").onclick=()=>{$("#selfb").classList.add("hidden");selfMode()};
+  $("#mic").onclick=()=>{stopSpeak();$("#st").textContent="Đang nghe...";
+    listen($("#mic"),t=>{const p=sim(t,it.text);best=Math.max(best,p);$("#st").textContent="";
+      $("#r").innerHTML=`<span class="score ${p>=85?"ok":p>=60?"mid":"no"}">${p}%</span> khớp. Máy nghe được: <span class="en">${esc(t)}</span>${best>p?` (tốt nhất ${best}%)`:""}`;give(best/100)},
+      msg=>{$("#st").textContent="";if(msg==="nosr")selfMode();else toast(msg)})};
+ },
+ order(el,it,fin){
+  const toks=clean(it.text).split(/\s+/);let src=shuffle(toks.map((t,i)=>({t,i})));
+  if(toks.length>2&&src.map(x=>x.t).join(" ")===toks.join(" "))src.reverse();
+  let dst=[],locked=false;
+  const draw=()=>{el.innerHTML=`<div class="prompt">🧩 Chạm các từ theo đúng thứ tự để tạo câu.</div><div class="chips en" id="dst" aria-label="Câu của anh">${dst.map((x,k)=>`<button data-d="${k}" ${locked?"disabled":""}>${esc(x.t)}</button>`).join("")||'<span class="small muted">Câu sẽ hiện ở đây</span>'}</div>
+    <div class="chips src en">${src.map((x,k)=>`<button data-s="${k}" ${locked?"disabled":""}>${esc(x.t)}</button>`).join("")}</div>
+    <div class="row"><button class="btn primary" id="chk" ${src.length||locked?"disabled":""}>Kiểm tra</button><button class="btn" id="clr" ${locked?"disabled":""}>Xếp lại</button></div><div class="res" id="r"></div>`;
+    $$("[data-s]").forEach(b=>b.onclick=()=>{dst.push(src.splice(+b.dataset.s,1)[0]);draw()});
+    $$("[data-d]").forEach(b=>b.onclick=()=>{src.push(dst.splice(+b.dataset.d,1)[0]);draw()});
+    $("#clr").onclick=()=>{src=src.concat(dst);dst=[];draw()};
+    $("#chk").onclick=()=>{const mine=dst.map(x=>x.t).join(" ");const ok=norm(mine).join(" ")===norm(toks.join(" ")).join(" ");
+      const p=sim(mine,toks.join(" "));locked=true;draw();
+      $("#r").innerHTML=ok?'<span class="score ok">Chính xác.</span>':`<span class="score no">Chưa đúng (${p}% khớp).</span> Câu đúng: <span class="en">${esc(toks.join(" "))}</span>`;
+      speak(it.text);fin(ok?1:Math.max(0,(p-40)/100))}};
+  draw();
+ }
+};
+function doneScreen(el,score,label,again,nextHref,nextLabel){
+  running=false;const b=band(score);
+  el.innerHTML=`<div class="done box">${ring(score,score,"big")}<div style="font-weight:800;color:var(${b[2]});margin-top:8px">${b[1]}</div>
+   <p class="muted">${esc(label)}${score>=70?"":" Cần từ 70 để đạt chuẩn; ôn lại rồi làm lần nữa."}</p>
+   <div class="row" style="justify-content:center"><button class="btn" id="again">Làm lại</button>${nextHref?`<button class="btn primary" data-go="${nextHref}">${esc(nextLabel)}</button>`:""}</div></div>`;
+  el.querySelector(".ring").style.margin="0 auto";
+  $("#again").onclick=again;bindGo(el);
+}
+
+/* Listening */
+function tabListen(m,n){
+  const w=m.weeks[n-1],all=words(w);
+  const sel=pick(all.filter(x=>x.core),3).concat(pick(all.filter(x=>!x.core),4));
+  const ws=shuffle(sel).map(x=>qMeaning(x,all,true));
+  const pool=sentPool(w);
+  const dict=pick(byLen(pool,5,15).length>=3?byLen(pool,5,15):pool,3).map(t=>({type:"dict",text:t}));
+  $("#panel").innerHTML=`<p class="small muted" style="margin:0 0 12px">7 câu nghe từ, chọn nghĩa (cốt lõi và mở rộng) và 3 câu chép chính tả. Mỗi lần làm lại, câu hỏi được trộn mới.</p><div id="run"></div>`;
+  runner($("#run"),ws.concat(dict),"Nghe",sc=>{setSc(m,n,"L",sc);doneScreen($("#run"),sc,"Điểm Nghe đã lưu (giữ điểm cao nhất).",()=>tabListen(m,n),`#/${m.id}/${n}/R`,"Sang Đọc")});
+}
+/* Reading */
+function tabRead(m,n){
+  const w=m.weeks[n-1],all=words(w),cw=w.w.map(x=>x[0]);
+  $("#panel").innerHTML=`<div class="box"><div class="row" style="justify-content:space-between;margin-bottom:8px"><b>📖 Bài đọc</b><div class="row"><button class="btn sm" id="ra">Nghe cả bài</button><button class="btn sm" id="rs">Dừng</button></div></div>
+   <div class="passage en">${markUp(w.p,cw)}</div><div class="tip hidden" id="tip"></div></div>
+   <p class="small muted">Chạm từ được tô để xem nghĩa. Đọc xong làm 7 câu: đúng/sai, điền từ cốt lõi và từ mở rộng.</p><div id="run"><button class="btn primary" id="startq">Làm câu hỏi đọc hiểu</button></div>`;
+  $("#ra").onclick=()=>speak(w.p);$("#rs").onclick=stopSpeak;
+  $$(".passage mark").forEach(mk=>mk.onclick=()=>{const x=all.find(y=>y.en.toLowerCase()===mk.dataset.w.toLowerCase());if(!x)return;
+    $("#tip").classList.remove("hidden");$("#tip").innerHTML=`${em(x.em,32,"inl")} <b class="en">${esc(x.en)}</b>: ${esc(x.vi)}`;speak(x.en)});
+  $("#startq").onclick=()=>{stopSpeak();
+    const tf=w.q.map(([s,v])=>({type:"mcq",prompt:`Đúng hay sai theo bài đọc?<br><span class="en">${esc(s)}</span>`,ans:v?"Đúng":"Sai",opts:["Đúng","Sai"]}));
+    const cz=pick(all.filter(x=>x.core),3).map(x=>qCloze(x,all)).filter(Boolean);
+    const ce=shuffle(all.filter(x=>!x.core)).map(x=>qCloze(x,all)).filter(Boolean).slice(0,2);
+    runner($("#run"),shuffle(tf).concat(cz,ce),"Đọc",sc=>{setSc(m,n,"R",sc);doneScreen($("#run"),sc,"Điểm Đọc đã lưu.",()=>tabRead(m,n),`#/${m.id}/${n}/S`,"Sang Nói")});
+  };
+}
+/* Speaking */
+function tabSpeak(m,n){
+  const w=m.weeks[n-1];
+  const ps=sentences(w.p).filter(balanced).map(clean);
+  const items=pick(byLen(ps,4,20),3).concat(pick(w.v.map(x=>x[3]),3)).map(t=>({type:"shadow",text:t}));
+  $("#panel").innerHTML=`<p class="small muted" style="margin:0 0 12px">Phần 1 tính điểm: đọc nhại 6 câu (shadowing) từ bài đọc và từ mở rộng. Phần 2 tùy chọn: trò chuyện với AI về chủ đề tuần.</p><div id="run"></div><div class="sec" id="free"></div>`;
+  runner($("#run"),items,"Nói",sc=>{setSc(m,n,"S",sc);doneScreen($("#run"),sc,"Điểm Nói đã lưu.",()=>tabSpeak(m,n),`#/${m.id}/${n}/W`,"Sang Viết")});
+  freeTalk(m,n);
+}
+function freeTalk(m,n){
+  const w=m.weeks[n-1],box=$("#free");
+  if(!sampleFn){box.innerHTML=`<h3>💬 Trò chuyện với AI</h3><p class="small muted">Phần này cần mở trang trong Claude. Tạm thời anh có thể tự trả lời thành tiếng: <span class="en">“Can you tell me about ${esc(w.e.toLowerCase())} in your life or work?”</span></p>`;return}
+  const st={log:[],busy:false};
+  const draw=()=>{box.innerHTML=`<h3>💬 Trò chuyện với AI</h3><p class="small muted" style="margin:0">AI đóng vai ${m.id==="m1"?"người bản xứ trong đời sống":m.id==="m2"?"khách hàng hoặc đồng nghiệp ngành tài chính":"giảng viên, đồng nghiệp nghiên cứu"}; sau mỗi lượt có góp ý câu tự nhiên hơn.</p>
+    <div class="chat">${st.log.map(x=>x.who==="ai"?`<div class="msg ai en">${esc(x.t)}</div>`:x.who==="me"?`<div class="msg me en">${esc(x.t)}</div>`:`<div class="fb">${x.good?"<b>Ổn.</b> ":"<b>Nên nói:</b> "}<span class="en">${esc(x.better)}</span>${x.note?"<br>"+esc(x.note):""}</div>`).join("")}${st.busy?'<div class="thinking">AI đang trả lời...</div>':""}</div>
+    ${st.log.length?`<div class="composer"><button class="icon" id="fm" aria-label="Nói">${I.mic}</button><textarea id="fi" class="en" lang="en" placeholder="Nói hoặc gõ câu trả lời bằng tiếng Anh" ${st.busy?"disabled":""}></textarea><button class="btn primary" id="fs" ${st.busy?"disabled":""}>Gửi</button></div>`:`<button class="btn primary" id="go1" ${st.busy?"disabled":""}>Bắt đầu trò chuyện</button>`}`;
+    if($("#go1"))$("#go1").onclick=()=>call(null);
+    if($("#fs")){$("#fs").onclick=()=>{const t=$("#fi").value.trim();if(t)call(t)};$("#fi").onkeydown=e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();$("#fs").click()}};
+      $("#fm").onclick=()=>listen($("#fm"),t=>{$("#fi").value=t},msg=>toast(msg==="nosr"?"Thiết bị chưa cho nhận giọng nói ở đây, anh gõ câu trả lời nhé.":msg))}};
+  const call=async t=>{if(st.busy)return;if(t)st.log.push({who:"me",t});st.busy=true;draw();
+    const tr=st.log.filter(x=>x.who!=="fb").map(x=>(x.who==="ai"?"PARTNER: ":"LEARNER: ")+x.t).join("\n");
+    const prompt=`You are an English speaking partner for a Vietnamese adult professional. Role: ${m.persona}. Topic: "${w.e}". Target level: ${m.months[Math.ceil(n/4)-1].lv} (CEFR). Encourage these words: ${words(w).map(x=>x.en).join(", ")}.
+Keep each reply to 1-3 short natural sentences and end with one question. Do not invent precise legal figures or statistics.
+${t?"Conversation so far:\n"+tr+"\nAlso evaluate ONLY the learner's last message.":"Start the conversation with a friendly opening question on the topic."}
+Return ONLY JSON: {"reply":"...","good":${t?"true or false":"true"},"better":"${t?"a more natural corrected version of the learner's last message":""}","note_vi":"${t?"one short explanation in Vietnamese, max 25 words, or empty":""}"}`;
+    aiAbort=new AbortController();
+    try{const o=await sampleFn.json(prompt,{modelTier:"quick",cache:false,signal:aiAbort.signal});
+      if(t)st.log.push({who:"fb",good:!!o.good,better:o.better||t,note:o.note_vi||""});st.log.push({who:"ai",t:o.reply||"Could you say that again?"});if(o.reply)speak(o.reply);touch();save()}
+    catch(e){if(t)st.log.pop();if(!(e&&e.code==="cancelled"))toast(e&&e.code==="not_granted"?"Anh chưa cho phép trang dùng Claude.":"AI chưa trả lời được, anh gửi lại sau.")}
+    finally{st.busy=false;aiAbort=null;if(document.body.contains(box))draw()}};
+  draw();
+}
+/* Writing */
+function tabWrite(m,n){
+  const w=m.weeks[n-1],pool=sentPool(w);
+  const items=pick(byLen(pool,5,12).length>=3?byLen(pool,5,12):pool,3).map(t=>({type:"order",text:t}));
+  $("#panel").innerHTML=`<p class="small muted" style="margin:0 0 12px">Phần 1: sắp xếp 3 câu (40% điểm). Phần 2: viết đoạn theo đề (60% điểm).</p><div id="run"></div>`;
+  runner($("#run"),items,"Viết, phần 1",a=>{running=true;freeWrite(m,n,a)});
+}
+function freeWrite(m,n,a){
+  const w=m.weeks[n-1],all=words(w),el=$("#run");
+  el.innerHTML=`<div class="item"><div class="ttl">Viết, phần 2 (phần 1 đạt ${a})</div><div class="prompt">✍️ ${esc(w.x)}</div>
+   <p class="small muted" style="margin:-6px 0 8px">Dùng ít nhất 4 từ của tuần (cốt lõi hoặc mở rộng). ${sampleFn?"AI chấm theo 4 tiêu chí: hoàn thành đề, ngữ pháp, từ vựng, mạch lạc.":"Bản ngoại tuyến chấm theo số từ của tuần và độ dài; mở trong Claude để AI chấm chi tiết."}</p>
+   <textarea id="wt" class="en" lang="en" style="min-height:160px" placeholder="Viết bằng tiếng Anh..."></textarea>
+   <div class="small used" id="used" style="margin:8px 0"></div>
+   <div class="row"><button class="btn primary" id="sub">Nộp bài</button></div><div class="res" id="r"></div></div>`;
+  const usedOf=t=>all.filter(x=>wre(x.en).test(t));
+  const upd=()=>{const t=$("#wt").value;const u=usedOf(t);const len=t.trim()?t.trim().split(/\s+/).length:0;
+    $("#used").innerHTML=`Đã dùng ${u.length} từ của tuần${u.length?": "+u.map(x=>`<mark>${esc(x.en)}</mark>`).join(", "):""}. Số từ: ${len}. <span class="muted">Gợi ý: ${pick(all.filter(x=>!u.includes(x)),5).map(x=>esc(x.en)).join(", ")}</span>`};
+  $("#wt").oninput=upd;upd();
+  $("#sub").onclick=async()=>{const t=$("#wt").value.trim();const len=t?t.split(/\s+/).length:0;if(len<15){toast("Anh viết ít nhất khoảng 15 từ nhé.");return}
+    const u=usedOf(t).length;
+    const offline=Math.round(Math.min(u,4)/4*60+Math.min(len,60)/60*40);
+    const fin=(b,html)=>{const sc=Math.round(a*.4+b*.6);setSc(m,n,"W",sc);running=false;
+      $("#r").innerHTML=html+`<p><b>Điểm Viết tuần: ${sc}</b> (phần 1: ${a}, phần 2: ${b}).</p><div class="row"><button class="btn" id="wa">Làm lại</button>${n<12?`<button class="btn primary" data-go="#/${m.id}/${n+1}">Sang tuần ${n+1}</button>`:`<button class="btn primary" data-go="#/${m.id}/ck/3">Kiểm tra mốc tháng 3</button>`}</div>`;
+      $("#wa").onclick=()=>tabWrite(m,n);bindGo($("#r"));$("#sub").disabled=true;$("#wt").readOnly=true};
+    if(!sampleFn){fin(offline,`<p class="small muted">Chấm ngoại tuyến: dùng ${u} từ của tuần, ${len} từ.</p>`);return}
+    $("#sub").disabled=true;$("#r").innerHTML='<p class="thinking">AI đang chấm bài, thường mất 10–40 giây...</p>';
+    aiAbort=new AbortController();
+    try{const o=await sampleFn.json(`You are an experienced English writing examiner for Vietnamese adult learners. Module: ${m.en}. Target level: ${m.months[Math.ceil(n/4)-1].lv} (CEFR).
+Task (in Vietnamese): ${w.x}
+Useful words of the week: ${all.map(x=>x.en).join(", ")}
+Learner's text:
+"""${t}"""
+Score 0-100 relative to the target level using four equal criteria: task achievement, grammar accuracy, vocabulary range (including words of the week), coherence. Be fair and specific; do not inflate.
+Return ONLY JSON: {"score":number,"criteria":{"task":0-25,"grammar":0-25,"vocabulary":0-25,"coherence":0-25},"corrected":"the learner's text rewritten correctly and naturally, keeping their ideas","good_vi":"one sentence in Vietnamese on what was done well","fixes_vi":["up to 4 short, specific corrections explained in Vietnamese, each quoting the wrong phrase and the fix"]}`,{modelTier:"default",signal:aiAbort.signal});
+      const b=Math.max(0,Math.min(100,Math.round(+o.score||offline)));const c=o.criteria||{};
+      fin(b,`<div class="box" style="margin-top:6px"><p style="margin-top:0"><b>AI chấm phần 2: ${b}/100</b><br><span class="small muted">Hoàn thành đề ${c.task??"–"}/25, ngữ pháp ${c.grammar??"–"}/25, từ vựng ${c.vocabulary??"–"}/25, mạch lạc ${c.coherence??"–"}/25</span></p>
+        ${o.good_vi?`<p>👍 ${esc(o.good_vi)}</p>`:""}${(o.fixes_vi||[]).length?`<ul>${o.fixes_vi.map(f=>`<li>${esc(f)}</li>`).join("")}</ul>`:""}
+        ${o.corrected?`<p class="small muted" style="margin-bottom:4px">Bản viết lại:</p><p class="en">${esc(o.corrected)}</p><button class="btn sm" id="hc">Nghe bản viết lại</button>`:""}</div>`);
+      if($("#hc"))$("#hc").onclick=()=>speak(o.corrected)}
+    catch(e){if(e&&e.code==="cancelled")return;fin(offline,`<p class="small muted">AI chưa chấm được (${e&&e.code==="not_granted"?"chưa cấp quyền":"lỗi kết nối"}), dùng điểm ngoại tuyến: ${u} từ của tuần, ${len} từ.</p>`)}
+    finally{aiAbort=null}};
+}
+
+/* ---------- Checkpoint ---------- */
+function renderCheckpoint(m,mo){
+  const all=[0,1,2,3].flatMap(j=>words(m.weeks[(mo-1)*4+j]));
+  const sel=pick(all.filter(x=>x.core),8).concat(pick(all.filter(x=>!x.core),7));
+  const items=shuffle(sel).map((x,i)=>i%3===0?qMeaning(x,all,true):i%3===1?qWord(x,all):(qCloze(x,all)||qWord(x,all)));
+  mount(`<button class="back" data-go="#/${m.id}">‹ ${esc(m.name)}</button>
+   <div class="wband"><div class="em">${em("🏁",76)}</div><div class="info"><h1>Kiểm tra mốc tháng ${mo}</h1><div class="muted small">${esc(m.months[mo-1].name)}, mục tiêu ${esc(m.months[mo-1].lv)}. 15 câu trộn từ 80 từ của 4 tuần; đạt từ 70% là qua mốc.</div></div></div>
+   <div id="panel"><div id="run"></div></div>`);
+  runner($("#run"),items,"Kiểm tra",sc=>{const k=m.id+"-"+mo;S.ck[k]=Math.max(S.ck[k]||0,sc);touch();save();
+    doneScreen($("#run"),sc,sc>=70?`Đạt mốc ${m.months[mo-1].lv}.`:"Chưa đạt mốc.",()=>renderCheckpoint(m,mo),`#/${m.id}`,"Về lộ trình")});
+}
+route();
+if(window.__PWA&&"serviceWorker" in navigator&&location.protocol.startsWith("http")){navigator.serviceWorker.register("sw.js").catch(()=>{})}
+
+</script></body></html>
