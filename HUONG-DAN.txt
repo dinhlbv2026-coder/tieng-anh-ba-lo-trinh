@@ -12,3 +12,5 @@ Lưu ý:
    Phần Viết được chấm theo số từ mới và độ dài. Muốn dùng AI, mở bản trên Claude.
  - Tiến độ lưu trong trình duyệt của từng máy. Dùng nút "Xuất tiến độ" / "Nhập tiến độ" để chuyển giữa các máy hoặc với bản trên Claude.
  - Nhận giọng nói (micro) hoạt động tốt nhất trên Chrome; nếu thiết bị không hỗ trợ, phần Nói chuyển sang tự đánh giá.
+
+Cập nhật âm thanh (v8): tải lên cả 2 tệp index.html, sw.js VÀ tệp mới kaudio.json (âm thanh thu sẵn cho phần Bé).
